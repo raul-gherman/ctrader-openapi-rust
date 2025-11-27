@@ -1,3 +1,5 @@
+// Automatically generated rust module for 'spotware.95.proto' file
+
 #![allow(clippy::upper_case_acronyms)]
 #![allow(non_snake_case)]
 #![allow(non_camel_case_types)]
@@ -108,10 +110,19 @@ pub enum ProtoOAPayloadType {
     PROTO_OA_VERSION_REQ = 2104,
     PROTO_OA_VERSION_RES = 2105,
     PROTO_OA_NEW_ORDER_REQ = 2106,
+    PROTO_OA_TRAILING_SL_CHANGED_EVENT = 2107,
     PROTO_OA_CANCEL_ORDER_REQ = 2108,
     PROTO_OA_AMEND_ORDER_REQ = 2109,
     PROTO_OA_AMEND_POSITION_SLTP_REQ = 2110,
     PROTO_OA_CLOSE_POSITION_REQ = 2111,
+    PROTO_OA_ASSET_LIST_REQ = 2112,
+    PROTO_OA_ASSET_LIST_RES = 2113,
+    PROTO_OA_SYMBOLS_LIST_REQ = 2114,
+    PROTO_OA_SYMBOLS_LIST_RES = 2115,
+    PROTO_OA_SYMBOL_BY_ID_REQ = 2116,
+    PROTO_OA_SYMBOL_BY_ID_RES = 2117,
+    PROTO_OA_SYMBOLS_FOR_CONVERSION_REQ = 2118,
+    PROTO_OA_SYMBOLS_FOR_CONVERSION_RES = 2119,
     PROTO_OA_SYMBOL_CHANGED_EVENT = 2120,
     PROTO_OA_TRADER_REQ = 2121,
     PROTO_OA_TRADER_RES = 2122,
@@ -121,16 +132,66 @@ pub enum ProtoOAPayloadType {
     PROTO_OA_EXECUTION_EVENT = 2126,
     PROTO_OA_SUBSCRIBE_SPOTS_REQ = 2127,
     PROTO_OA_SUBSCRIBE_SPOTS_RES = 2128,
+    PROTO_OA_UNSUBSCRIBE_SPOTS_REQ = 2129,
+    PROTO_OA_UNSUBSCRIBE_SPOTS_RES = 2130,
     PROTO_OA_SPOT_EVENT = 2131,
     PROTO_OA_ORDER_ERROR_EVENT = 2132,
+    PROTO_OA_DEAL_LIST_REQ = 2133,
+    PROTO_OA_DEAL_LIST_RES = 2134,
+    PROTO_OA_SUBSCRIBE_LIVE_TRENDBAR_REQ = 2135,
+    PROTO_OA_UNSUBSCRIBE_LIVE_TRENDBAR_REQ = 2136,
+    PROTO_OA_GET_TRENDBARS_REQ = 2137,
+    PROTO_OA_GET_TRENDBARS_RES = 2138,
+    PROTO_OA_EXPECTED_MARGIN_REQ = 2139,
+    PROTO_OA_EXPECTED_MARGIN_RES = 2140,
+    PROTO_OA_MARGIN_CHANGED_EVENT = 2141,
     PROTO_OA_ERROR_RES = 2142,
+    PROTO_OA_CASH_FLOW_HISTORY_LIST_REQ = 2143,
+    PROTO_OA_CASH_FLOW_HISTORY_LIST_RES = 2144,
+    PROTO_OA_GET_TICKDATA_REQ = 2145,
+    PROTO_OA_GET_TICKDATA_RES = 2146,
     PROTO_OA_ACCOUNTS_TOKEN_INVALIDATED_EVENT = 2147,
     PROTO_OA_CLIENT_DISCONNECT_EVENT = 2148,
     PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_REQ = 2149,
     PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_RES = 2150,
+    PROTO_OA_GET_CTID_PROFILE_BY_TOKEN_REQ = 2151,
+    PROTO_OA_GET_CTID_PROFILE_BY_TOKEN_RES = 2152,
+    PROTO_OA_ASSET_CLASS_LIST_REQ = 2153,
+    PROTO_OA_ASSET_CLASS_LIST_RES = 2154,
+    PROTO_OA_DEPTH_EVENT = 2155,
+    PROTO_OA_SUBSCRIBE_DEPTH_QUOTES_REQ = 2156,
+    PROTO_OA_SUBSCRIBE_DEPTH_QUOTES_RES = 2157,
+    PROTO_OA_UNSUBSCRIBE_DEPTH_QUOTES_REQ = 2158,
+    PROTO_OA_UNSUBSCRIBE_DEPTH_QUOTES_RES = 2159,
+    PROTO_OA_SYMBOL_CATEGORY_REQ = 2160,
+    PROTO_OA_SYMBOL_CATEGORY_RES = 2161,
+    PROTO_OA_ACCOUNT_LOGOUT_REQ = 2162,
+    PROTO_OA_ACCOUNT_LOGOUT_RES = 2163,
     PROTO_OA_ACCOUNT_DISCONNECT_EVENT = 2164,
+    PROTO_OA_SUBSCRIBE_LIVE_TRENDBAR_RES = 2165,
+    PROTO_OA_UNSUBSCRIBE_LIVE_TRENDBAR_RES = 2166,
+    PROTO_OA_MARGIN_CALL_LIST_REQ = 2167,
+    PROTO_OA_MARGIN_CALL_LIST_RES = 2168,
+    PROTO_OA_MARGIN_CALL_UPDATE_REQ = 2169,
+    PROTO_OA_MARGIN_CALL_UPDATE_RES = 2170,
+    PROTO_OA_MARGIN_CALL_UPDATE_EVENT = 2171,
+    PROTO_OA_MARGIN_CALL_TRIGGER_EVENT = 2172,
     PROTO_OA_REFRESH_TOKEN_REQ = 2173,
     PROTO_OA_REFRESH_TOKEN_RES = 2174,
+    PROTO_OA_ORDER_LIST_REQ = 2175,
+    PROTO_OA_ORDER_LIST_RES = 2176,
+    PROTO_OA_GET_DYNAMIC_LEVERAGE_REQ = 2177,
+    PROTO_OA_GET_DYNAMIC_LEVERAGE_RES = 2178,
+    PROTO_OA_DEAL_LIST_BY_POSITION_ID_REQ = 2179,
+    PROTO_OA_DEAL_LIST_BY_POSITION_ID_RES = 2180,
+    PROTO_OA_ORDER_DETAILS_REQ = 2181,
+    PROTO_OA_ORDER_DETAILS_RES = 2182,
+    PROTO_OA_ORDER_LIST_BY_POSITION_ID_REQ = 2183,
+    PROTO_OA_ORDER_LIST_BY_POSITION_ID_RES = 2184,
+    PROTO_OA_DEAL_OFFSET_LIST_REQ = 2185,
+    PROTO_OA_DEAL_OFFSET_LIST_RES = 2186,
+    PROTO_OA_GET_POSITION_UNREALIZED_PNL_REQ = 2187,
+    PROTO_OA_GET_POSITION_UNREALIZED_PNL_RES = 2188,
 }
 
 impl Default for ProtoOAPayloadType {
@@ -149,10 +210,19 @@ impl From<i32> for ProtoOAPayloadType {
             2104 => Self::PROTO_OA_VERSION_REQ,
             2105 => Self::PROTO_OA_VERSION_RES,
             2106 => Self::PROTO_OA_NEW_ORDER_REQ,
+            2107 => Self::PROTO_OA_TRAILING_SL_CHANGED_EVENT,
             2108 => Self::PROTO_OA_CANCEL_ORDER_REQ,
             2109 => Self::PROTO_OA_AMEND_ORDER_REQ,
             2110 => Self::PROTO_OA_AMEND_POSITION_SLTP_REQ,
             2111 => Self::PROTO_OA_CLOSE_POSITION_REQ,
+            2112 => Self::PROTO_OA_ASSET_LIST_REQ,
+            2113 => Self::PROTO_OA_ASSET_LIST_RES,
+            2114 => Self::PROTO_OA_SYMBOLS_LIST_REQ,
+            2115 => Self::PROTO_OA_SYMBOLS_LIST_RES,
+            2116 => Self::PROTO_OA_SYMBOL_BY_ID_REQ,
+            2117 => Self::PROTO_OA_SYMBOL_BY_ID_RES,
+            2118 => Self::PROTO_OA_SYMBOLS_FOR_CONVERSION_REQ,
+            2119 => Self::PROTO_OA_SYMBOLS_FOR_CONVERSION_RES,
             2120 => Self::PROTO_OA_SYMBOL_CHANGED_EVENT,
             2121 => Self::PROTO_OA_TRADER_REQ,
             2122 => Self::PROTO_OA_TRADER_RES,
@@ -162,16 +232,66 @@ impl From<i32> for ProtoOAPayloadType {
             2126 => Self::PROTO_OA_EXECUTION_EVENT,
             2127 => Self::PROTO_OA_SUBSCRIBE_SPOTS_REQ,
             2128 => Self::PROTO_OA_SUBSCRIBE_SPOTS_RES,
+            2129 => Self::PROTO_OA_UNSUBSCRIBE_SPOTS_REQ,
+            2130 => Self::PROTO_OA_UNSUBSCRIBE_SPOTS_RES,
             2131 => Self::PROTO_OA_SPOT_EVENT,
             2132 => Self::PROTO_OA_ORDER_ERROR_EVENT,
+            2133 => Self::PROTO_OA_DEAL_LIST_REQ,
+            2134 => Self::PROTO_OA_DEAL_LIST_RES,
+            2135 => Self::PROTO_OA_SUBSCRIBE_LIVE_TRENDBAR_REQ,
+            2136 => Self::PROTO_OA_UNSUBSCRIBE_LIVE_TRENDBAR_REQ,
+            2137 => Self::PROTO_OA_GET_TRENDBARS_REQ,
+            2138 => Self::PROTO_OA_GET_TRENDBARS_RES,
+            2139 => Self::PROTO_OA_EXPECTED_MARGIN_REQ,
+            2140 => Self::PROTO_OA_EXPECTED_MARGIN_RES,
+            2141 => Self::PROTO_OA_MARGIN_CHANGED_EVENT,
             2142 => Self::PROTO_OA_ERROR_RES,
+            2143 => Self::PROTO_OA_CASH_FLOW_HISTORY_LIST_REQ,
+            2144 => Self::PROTO_OA_CASH_FLOW_HISTORY_LIST_RES,
+            2145 => Self::PROTO_OA_GET_TICKDATA_REQ,
+            2146 => Self::PROTO_OA_GET_TICKDATA_RES,
             2147 => Self::PROTO_OA_ACCOUNTS_TOKEN_INVALIDATED_EVENT,
             2148 => Self::PROTO_OA_CLIENT_DISCONNECT_EVENT,
             2149 => Self::PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_REQ,
             2150 => Self::PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_RES,
+            2151 => Self::PROTO_OA_GET_CTID_PROFILE_BY_TOKEN_REQ,
+            2152 => Self::PROTO_OA_GET_CTID_PROFILE_BY_TOKEN_RES,
+            2153 => Self::PROTO_OA_ASSET_CLASS_LIST_REQ,
+            2154 => Self::PROTO_OA_ASSET_CLASS_LIST_RES,
+            2155 => Self::PROTO_OA_DEPTH_EVENT,
+            2156 => Self::PROTO_OA_SUBSCRIBE_DEPTH_QUOTES_REQ,
+            2157 => Self::PROTO_OA_SUBSCRIBE_DEPTH_QUOTES_RES,
+            2158 => Self::PROTO_OA_UNSUBSCRIBE_DEPTH_QUOTES_REQ,
+            2159 => Self::PROTO_OA_UNSUBSCRIBE_DEPTH_QUOTES_RES,
+            2160 => Self::PROTO_OA_SYMBOL_CATEGORY_REQ,
+            2161 => Self::PROTO_OA_SYMBOL_CATEGORY_RES,
+            2162 => Self::PROTO_OA_ACCOUNT_LOGOUT_REQ,
+            2163 => Self::PROTO_OA_ACCOUNT_LOGOUT_RES,
             2164 => Self::PROTO_OA_ACCOUNT_DISCONNECT_EVENT,
+            2165 => Self::PROTO_OA_SUBSCRIBE_LIVE_TRENDBAR_RES,
+            2166 => Self::PROTO_OA_UNSUBSCRIBE_LIVE_TRENDBAR_RES,
+            2167 => Self::PROTO_OA_MARGIN_CALL_LIST_REQ,
+            2168 => Self::PROTO_OA_MARGIN_CALL_LIST_RES,
+            2169 => Self::PROTO_OA_MARGIN_CALL_UPDATE_REQ,
+            2170 => Self::PROTO_OA_MARGIN_CALL_UPDATE_RES,
+            2171 => Self::PROTO_OA_MARGIN_CALL_UPDATE_EVENT,
+            2172 => Self::PROTO_OA_MARGIN_CALL_TRIGGER_EVENT,
             2173 => Self::PROTO_OA_REFRESH_TOKEN_REQ,
             2174 => Self::PROTO_OA_REFRESH_TOKEN_RES,
+            2175 => Self::PROTO_OA_ORDER_LIST_REQ,
+            2176 => Self::PROTO_OA_ORDER_LIST_RES,
+            2177 => Self::PROTO_OA_GET_DYNAMIC_LEVERAGE_REQ,
+            2178 => Self::PROTO_OA_GET_DYNAMIC_LEVERAGE_RES,
+            2179 => Self::PROTO_OA_DEAL_LIST_BY_POSITION_ID_REQ,
+            2180 => Self::PROTO_OA_DEAL_LIST_BY_POSITION_ID_RES,
+            2181 => Self::PROTO_OA_ORDER_DETAILS_REQ,
+            2182 => Self::PROTO_OA_ORDER_DETAILS_RES,
+            2183 => Self::PROTO_OA_ORDER_LIST_BY_POSITION_ID_REQ,
+            2184 => Self::PROTO_OA_ORDER_LIST_BY_POSITION_ID_RES,
+            2185 => Self::PROTO_OA_DEAL_OFFSET_LIST_REQ,
+            2186 => Self::PROTO_OA_DEAL_OFFSET_LIST_RES,
+            2187 => Self::PROTO_OA_GET_POSITION_UNREALIZED_PNL_REQ,
+            2188 => Self::PROTO_OA_GET_POSITION_UNREALIZED_PNL_RES,
             _ => Self::default(),
         }
     }
@@ -187,10 +307,19 @@ impl<'a> From<&'a str> for ProtoOAPayloadType {
             "PROTO_OA_VERSION_REQ" => Self::PROTO_OA_VERSION_REQ,
             "PROTO_OA_VERSION_RES" => Self::PROTO_OA_VERSION_RES,
             "PROTO_OA_NEW_ORDER_REQ" => Self::PROTO_OA_NEW_ORDER_REQ,
+            "PROTO_OA_TRAILING_SL_CHANGED_EVENT" => Self::PROTO_OA_TRAILING_SL_CHANGED_EVENT,
             "PROTO_OA_CANCEL_ORDER_REQ" => Self::PROTO_OA_CANCEL_ORDER_REQ,
             "PROTO_OA_AMEND_ORDER_REQ" => Self::PROTO_OA_AMEND_ORDER_REQ,
             "PROTO_OA_AMEND_POSITION_SLTP_REQ" => Self::PROTO_OA_AMEND_POSITION_SLTP_REQ,
             "PROTO_OA_CLOSE_POSITION_REQ" => Self::PROTO_OA_CLOSE_POSITION_REQ,
+            "PROTO_OA_ASSET_LIST_REQ" => Self::PROTO_OA_ASSET_LIST_REQ,
+            "PROTO_OA_ASSET_LIST_RES" => Self::PROTO_OA_ASSET_LIST_RES,
+            "PROTO_OA_SYMBOLS_LIST_REQ" => Self::PROTO_OA_SYMBOLS_LIST_REQ,
+            "PROTO_OA_SYMBOLS_LIST_RES" => Self::PROTO_OA_SYMBOLS_LIST_RES,
+            "PROTO_OA_SYMBOL_BY_ID_REQ" => Self::PROTO_OA_SYMBOL_BY_ID_REQ,
+            "PROTO_OA_SYMBOL_BY_ID_RES" => Self::PROTO_OA_SYMBOL_BY_ID_RES,
+            "PROTO_OA_SYMBOLS_FOR_CONVERSION_REQ" => Self::PROTO_OA_SYMBOLS_FOR_CONVERSION_REQ,
+            "PROTO_OA_SYMBOLS_FOR_CONVERSION_RES" => Self::PROTO_OA_SYMBOLS_FOR_CONVERSION_RES,
             "PROTO_OA_SYMBOL_CHANGED_EVENT" => Self::PROTO_OA_SYMBOL_CHANGED_EVENT,
             "PROTO_OA_TRADER_REQ" => Self::PROTO_OA_TRADER_REQ,
             "PROTO_OA_TRADER_RES" => Self::PROTO_OA_TRADER_RES,
@@ -200,22 +329,291 @@ impl<'a> From<&'a str> for ProtoOAPayloadType {
             "PROTO_OA_EXECUTION_EVENT" => Self::PROTO_OA_EXECUTION_EVENT,
             "PROTO_OA_SUBSCRIBE_SPOTS_REQ" => Self::PROTO_OA_SUBSCRIBE_SPOTS_REQ,
             "PROTO_OA_SUBSCRIBE_SPOTS_RES" => Self::PROTO_OA_SUBSCRIBE_SPOTS_RES,
+            "PROTO_OA_UNSUBSCRIBE_SPOTS_REQ" => Self::PROTO_OA_UNSUBSCRIBE_SPOTS_REQ,
+            "PROTO_OA_UNSUBSCRIBE_SPOTS_RES" => Self::PROTO_OA_UNSUBSCRIBE_SPOTS_RES,
             "PROTO_OA_SPOT_EVENT" => Self::PROTO_OA_SPOT_EVENT,
             "PROTO_OA_ORDER_ERROR_EVENT" => Self::PROTO_OA_ORDER_ERROR_EVENT,
+            "PROTO_OA_DEAL_LIST_REQ" => Self::PROTO_OA_DEAL_LIST_REQ,
+            "PROTO_OA_DEAL_LIST_RES" => Self::PROTO_OA_DEAL_LIST_RES,
+            "PROTO_OA_SUBSCRIBE_LIVE_TRENDBAR_REQ" => Self::PROTO_OA_SUBSCRIBE_LIVE_TRENDBAR_REQ,
+            "PROTO_OA_UNSUBSCRIBE_LIVE_TRENDBAR_REQ" => Self::PROTO_OA_UNSUBSCRIBE_LIVE_TRENDBAR_REQ,
+            "PROTO_OA_GET_TRENDBARS_REQ" => Self::PROTO_OA_GET_TRENDBARS_REQ,
+            "PROTO_OA_GET_TRENDBARS_RES" => Self::PROTO_OA_GET_TRENDBARS_RES,
+            "PROTO_OA_EXPECTED_MARGIN_REQ" => Self::PROTO_OA_EXPECTED_MARGIN_REQ,
+            "PROTO_OA_EXPECTED_MARGIN_RES" => Self::PROTO_OA_EXPECTED_MARGIN_RES,
+            "PROTO_OA_MARGIN_CHANGED_EVENT" => Self::PROTO_OA_MARGIN_CHANGED_EVENT,
             "PROTO_OA_ERROR_RES" => Self::PROTO_OA_ERROR_RES,
-            "PROTO_OA_ACCOUNTS_TOKEN_INVALIDATED_EVENT" => {
-                Self::PROTO_OA_ACCOUNTS_TOKEN_INVALIDATED_EVENT
-            }
+            "PROTO_OA_CASH_FLOW_HISTORY_LIST_REQ" => Self::PROTO_OA_CASH_FLOW_HISTORY_LIST_REQ,
+            "PROTO_OA_CASH_FLOW_HISTORY_LIST_RES" => Self::PROTO_OA_CASH_FLOW_HISTORY_LIST_RES,
+            "PROTO_OA_GET_TICKDATA_REQ" => Self::PROTO_OA_GET_TICKDATA_REQ,
+            "PROTO_OA_GET_TICKDATA_RES" => Self::PROTO_OA_GET_TICKDATA_RES,
+            "PROTO_OA_ACCOUNTS_TOKEN_INVALIDATED_EVENT" => Self::PROTO_OA_ACCOUNTS_TOKEN_INVALIDATED_EVENT,
             "PROTO_OA_CLIENT_DISCONNECT_EVENT" => Self::PROTO_OA_CLIENT_DISCONNECT_EVENT,
-            "PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_REQ" => {
-                Self::PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_REQ
-            }
-            "PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_RES" => {
-                Self::PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_RES
-            }
+            "PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_REQ" => Self::PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_REQ,
+            "PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_RES" => Self::PROTO_OA_GET_ACCOUNTS_BY_ACCESS_TOKEN_RES,
+            "PROTO_OA_GET_CTID_PROFILE_BY_TOKEN_REQ" => Self::PROTO_OA_GET_CTID_PROFILE_BY_TOKEN_REQ,
+            "PROTO_OA_GET_CTID_PROFILE_BY_TOKEN_RES" => Self::PROTO_OA_GET_CTID_PROFILE_BY_TOKEN_RES,
+            "PROTO_OA_ASSET_CLASS_LIST_REQ" => Self::PROTO_OA_ASSET_CLASS_LIST_REQ,
+            "PROTO_OA_ASSET_CLASS_LIST_RES" => Self::PROTO_OA_ASSET_CLASS_LIST_RES,
+            "PROTO_OA_DEPTH_EVENT" => Self::PROTO_OA_DEPTH_EVENT,
+            "PROTO_OA_SUBSCRIBE_DEPTH_QUOTES_REQ" => Self::PROTO_OA_SUBSCRIBE_DEPTH_QUOTES_REQ,
+            "PROTO_OA_SUBSCRIBE_DEPTH_QUOTES_RES" => Self::PROTO_OA_SUBSCRIBE_DEPTH_QUOTES_RES,
+            "PROTO_OA_UNSUBSCRIBE_DEPTH_QUOTES_REQ" => Self::PROTO_OA_UNSUBSCRIBE_DEPTH_QUOTES_REQ,
+            "PROTO_OA_UNSUBSCRIBE_DEPTH_QUOTES_RES" => Self::PROTO_OA_UNSUBSCRIBE_DEPTH_QUOTES_RES,
+            "PROTO_OA_SYMBOL_CATEGORY_REQ" => Self::PROTO_OA_SYMBOL_CATEGORY_REQ,
+            "PROTO_OA_SYMBOL_CATEGORY_RES" => Self::PROTO_OA_SYMBOL_CATEGORY_RES,
+            "PROTO_OA_ACCOUNT_LOGOUT_REQ" => Self::PROTO_OA_ACCOUNT_LOGOUT_REQ,
+            "PROTO_OA_ACCOUNT_LOGOUT_RES" => Self::PROTO_OA_ACCOUNT_LOGOUT_RES,
             "PROTO_OA_ACCOUNT_DISCONNECT_EVENT" => Self::PROTO_OA_ACCOUNT_DISCONNECT_EVENT,
+            "PROTO_OA_SUBSCRIBE_LIVE_TRENDBAR_RES" => Self::PROTO_OA_SUBSCRIBE_LIVE_TRENDBAR_RES,
+            "PROTO_OA_UNSUBSCRIBE_LIVE_TRENDBAR_RES" => Self::PROTO_OA_UNSUBSCRIBE_LIVE_TRENDBAR_RES,
+            "PROTO_OA_MARGIN_CALL_LIST_REQ" => Self::PROTO_OA_MARGIN_CALL_LIST_REQ,
+            "PROTO_OA_MARGIN_CALL_LIST_RES" => Self::PROTO_OA_MARGIN_CALL_LIST_RES,
+            "PROTO_OA_MARGIN_CALL_UPDATE_REQ" => Self::PROTO_OA_MARGIN_CALL_UPDATE_REQ,
+            "PROTO_OA_MARGIN_CALL_UPDATE_RES" => Self::PROTO_OA_MARGIN_CALL_UPDATE_RES,
+            "PROTO_OA_MARGIN_CALL_UPDATE_EVENT" => Self::PROTO_OA_MARGIN_CALL_UPDATE_EVENT,
+            "PROTO_OA_MARGIN_CALL_TRIGGER_EVENT" => Self::PROTO_OA_MARGIN_CALL_TRIGGER_EVENT,
             "PROTO_OA_REFRESH_TOKEN_REQ" => Self::PROTO_OA_REFRESH_TOKEN_REQ,
             "PROTO_OA_REFRESH_TOKEN_RES" => Self::PROTO_OA_REFRESH_TOKEN_RES,
+            "PROTO_OA_ORDER_LIST_REQ" => Self::PROTO_OA_ORDER_LIST_REQ,
+            "PROTO_OA_ORDER_LIST_RES" => Self::PROTO_OA_ORDER_LIST_RES,
+            "PROTO_OA_GET_DYNAMIC_LEVERAGE_REQ" => Self::PROTO_OA_GET_DYNAMIC_LEVERAGE_REQ,
+            "PROTO_OA_GET_DYNAMIC_LEVERAGE_RES" => Self::PROTO_OA_GET_DYNAMIC_LEVERAGE_RES,
+            "PROTO_OA_DEAL_LIST_BY_POSITION_ID_REQ" => Self::PROTO_OA_DEAL_LIST_BY_POSITION_ID_REQ,
+            "PROTO_OA_DEAL_LIST_BY_POSITION_ID_RES" => Self::PROTO_OA_DEAL_LIST_BY_POSITION_ID_RES,
+            "PROTO_OA_ORDER_DETAILS_REQ" => Self::PROTO_OA_ORDER_DETAILS_REQ,
+            "PROTO_OA_ORDER_DETAILS_RES" => Self::PROTO_OA_ORDER_DETAILS_RES,
+            "PROTO_OA_ORDER_LIST_BY_POSITION_ID_REQ" => Self::PROTO_OA_ORDER_LIST_BY_POSITION_ID_REQ,
+            "PROTO_OA_ORDER_LIST_BY_POSITION_ID_RES" => Self::PROTO_OA_ORDER_LIST_BY_POSITION_ID_RES,
+            "PROTO_OA_DEAL_OFFSET_LIST_REQ" => Self::PROTO_OA_DEAL_OFFSET_LIST_REQ,
+            "PROTO_OA_DEAL_OFFSET_LIST_RES" => Self::PROTO_OA_DEAL_OFFSET_LIST_RES,
+            "PROTO_OA_GET_POSITION_UNREALIZED_PNL_REQ" => Self::PROTO_OA_GET_POSITION_UNREALIZED_PNL_REQ,
+            "PROTO_OA_GET_POSITION_UNREALIZED_PNL_RES" => Self::PROTO_OA_GET_POSITION_UNREALIZED_PNL_RES,
+            _ => Self::default(),
+        }
+    }
+}
+
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub enum ProtoOADayOfWeek {
+    NONE = 0,
+    MONDAY = 1,
+    TUESDAY = 2,
+    WEDNESDAY = 3,
+    THURSDAY = 4,
+    FRIDAY = 5,
+    SATURDAY = 6,
+    SUNDAY = 7,
+}
+
+impl Default for ProtoOADayOfWeek {
+    fn default() -> Self {
+        ProtoOADayOfWeek::NONE
+    }
+}
+
+impl From<i32> for ProtoOADayOfWeek {
+    fn from(i: i32) -> Self {
+        match i {
+            0 => Self::NONE,
+            1 => Self::MONDAY,
+            2 => Self::TUESDAY,
+            3 => Self::WEDNESDAY,
+            4 => Self::THURSDAY,
+            5 => Self::FRIDAY,
+            6 => Self::SATURDAY,
+            7 => Self::SUNDAY,
+            _ => Self::default(),
+        }
+    }
+}
+
+impl<'a> From<&'a str> for ProtoOADayOfWeek {
+    fn from(s: &'a str) -> Self {
+        match s {
+            "NONE" => Self::NONE,
+            "MONDAY" => Self::MONDAY,
+            "TUESDAY" => Self::TUESDAY,
+            "WEDNESDAY" => Self::WEDNESDAY,
+            "THURSDAY" => Self::THURSDAY,
+            "FRIDAY" => Self::FRIDAY,
+            "SATURDAY" => Self::SATURDAY,
+            "SUNDAY" => Self::SUNDAY,
+            _ => Self::default(),
+        }
+    }
+}
+
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub enum ProtoOACommissionType {
+    USD_PER_MILLION_USD = 1,
+    USD_PER_LOT = 2,
+    PERCENTAGE_OF_VALUE = 3,
+    QUOTE_CCY_PER_LOT = 4,
+}
+
+impl Default for ProtoOACommissionType {
+    fn default() -> Self {
+        ProtoOACommissionType::USD_PER_MILLION_USD
+    }
+}
+
+impl From<i32> for ProtoOACommissionType {
+    fn from(i: i32) -> Self {
+        match i {
+            1 => Self::USD_PER_MILLION_USD,
+            2 => Self::USD_PER_LOT,
+            3 => Self::PERCENTAGE_OF_VALUE,
+            4 => Self::QUOTE_CCY_PER_LOT,
+            _ => Self::default(),
+        }
+    }
+}
+
+impl<'a> From<&'a str> for ProtoOACommissionType {
+    fn from(s: &'a str) -> Self {
+        match s {
+            "USD_PER_MILLION_USD" => Self::USD_PER_MILLION_USD,
+            "USD_PER_LOT" => Self::USD_PER_LOT,
+            "PERCENTAGE_OF_VALUE" => Self::PERCENTAGE_OF_VALUE,
+            "QUOTE_CCY_PER_LOT" => Self::QUOTE_CCY_PER_LOT,
+            _ => Self::default(),
+        }
+    }
+}
+
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub enum ProtoOASymbolDistanceType {
+    SYMBOL_DISTANCE_IN_POINTS = 1,
+    SYMBOL_DISTANCE_IN_PERCENTAGE = 2,
+}
+
+impl Default for ProtoOASymbolDistanceType {
+    fn default() -> Self {
+        ProtoOASymbolDistanceType::SYMBOL_DISTANCE_IN_POINTS
+    }
+}
+
+impl From<i32> for ProtoOASymbolDistanceType {
+    fn from(i: i32) -> Self {
+        match i {
+            1 => Self::SYMBOL_DISTANCE_IN_POINTS,
+            2 => Self::SYMBOL_DISTANCE_IN_PERCENTAGE,
+            _ => Self::default(),
+        }
+    }
+}
+
+impl<'a> From<&'a str> for ProtoOASymbolDistanceType {
+    fn from(s: &'a str) -> Self {
+        match s {
+            "SYMBOL_DISTANCE_IN_POINTS" => Self::SYMBOL_DISTANCE_IN_POINTS,
+            "SYMBOL_DISTANCE_IN_PERCENTAGE" => Self::SYMBOL_DISTANCE_IN_PERCENTAGE,
+            _ => Self::default(),
+        }
+    }
+}
+
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub enum ProtoOAMinCommissionType {
+    CURRENCY = 1,
+    QUOTE_CURRENCY = 2,
+}
+
+impl Default for ProtoOAMinCommissionType {
+    fn default() -> Self {
+        ProtoOAMinCommissionType::CURRENCY
+    }
+}
+
+impl From<i32> for ProtoOAMinCommissionType {
+    fn from(i: i32) -> Self {
+        match i {
+            1 => Self::CURRENCY,
+            2 => Self::QUOTE_CURRENCY,
+            _ => Self::default(),
+        }
+    }
+}
+
+impl<'a> From<&'a str> for ProtoOAMinCommissionType {
+    fn from(s: &'a str) -> Self {
+        match s {
+            "CURRENCY" => Self::CURRENCY,
+            "QUOTE_CURRENCY" => Self::QUOTE_CURRENCY,
+            _ => Self::default(),
+        }
+    }
+}
+
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub enum ProtoOATradingMode {
+    ENABLED = 0,
+    DISABLED_WITHOUT_PENDINGS_EXECUTION = 1,
+    DISABLED_WITH_PENDINGS_EXECUTION = 2,
+    CLOSE_ONLY_MODE = 3,
+}
+
+impl Default for ProtoOATradingMode {
+    fn default() -> Self {
+        ProtoOATradingMode::ENABLED
+    }
+}
+
+impl From<i32> for ProtoOATradingMode {
+    fn from(i: i32) -> Self {
+        match i {
+            0 => Self::ENABLED,
+            1 => Self::DISABLED_WITHOUT_PENDINGS_EXECUTION,
+            2 => Self::DISABLED_WITH_PENDINGS_EXECUTION,
+            3 => Self::CLOSE_ONLY_MODE,
+            _ => Self::default(),
+        }
+    }
+}
+
+impl<'a> From<&'a str> for ProtoOATradingMode {
+    fn from(s: &'a str) -> Self {
+        match s {
+            "ENABLED" => Self::ENABLED,
+            "DISABLED_WITHOUT_PENDINGS_EXECUTION" => Self::DISABLED_WITHOUT_PENDINGS_EXECUTION,
+            "DISABLED_WITH_PENDINGS_EXECUTION" => Self::DISABLED_WITH_PENDINGS_EXECUTION,
+            "CLOSE_ONLY_MODE" => Self::CLOSE_ONLY_MODE,
+            _ => Self::default(),
+        }
+    }
+}
+
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub enum ProtoOASwapCalculationType {
+    PIPS = 0,
+    PERCENTAGE = 1,
+    POINTS = 2,
+}
+
+impl Default for ProtoOASwapCalculationType {
+    fn default() -> Self {
+        ProtoOASwapCalculationType::PIPS
+    }
+}
+
+impl From<i32> for ProtoOASwapCalculationType {
+    fn from(i: i32) -> Self {
+        match i {
+            0 => Self::PIPS,
+            1 => Self::PERCENTAGE,
+            2 => Self::POINTS,
+            _ => Self::default(),
+        }
+    }
+}
+
+impl<'a> From<&'a str> for ProtoOASwapCalculationType {
+    fn from(s: &'a str) -> Self {
+        match s {
+            "PIPS" => Self::PIPS,
+            "PERCENTAGE" => Self::PERCENTAGE,
+            "POINTS" => Self::POINTS,
             _ => Self::default(),
         }
     }
@@ -324,6 +722,41 @@ impl<'a> From<&'a str> for ProtoOAAccountType {
             "HEDGED" => Self::HEDGED,
             "NETTED" => Self::NETTED,
             "SPREAD_BETTING" => Self::SPREAD_BETTING,
+            _ => Self::default(),
+        }
+    }
+}
+
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub enum ProtoOANotificationType {
+    MARGIN_LEVEL_THRESHOLD_1 = 61,
+    MARGIN_LEVEL_THRESHOLD_2 = 62,
+    MARGIN_LEVEL_THRESHOLD_3 = 63,
+}
+
+impl Default for ProtoOANotificationType {
+    fn default() -> Self {
+        ProtoOANotificationType::MARGIN_LEVEL_THRESHOLD_1
+    }
+}
+
+impl From<i32> for ProtoOANotificationType {
+    fn from(i: i32) -> Self {
+        match i {
+            61 => Self::MARGIN_LEVEL_THRESHOLD_1,
+            62 => Self::MARGIN_LEVEL_THRESHOLD_2,
+            63 => Self::MARGIN_LEVEL_THRESHOLD_3,
+            _ => Self::default(),
+        }
+    }
+}
+
+impl<'a> From<&'a str> for ProtoOANotificationType {
+    fn from(s: &'a str) -> Self {
+        match s {
+            "MARGIN_LEVEL_THRESHOLD_1" => Self::MARGIN_LEVEL_THRESHOLD_1,
+            "MARGIN_LEVEL_THRESHOLD_2" => Self::MARGIN_LEVEL_THRESHOLD_2,
+            "MARGIN_LEVEL_THRESHOLD_3" => Self::MARGIN_LEVEL_THRESHOLD_3,
             _ => Self::default(),
         }
     }
@@ -1035,40 +1468,24 @@ impl<'a> From<&'a str> for ProtoOAChangeBalanceType {
         match s {
             "BALANCE_DEPOSIT" => Self::BALANCE_DEPOSIT,
             "BALANCE_WITHDRAW" => Self::BALANCE_WITHDRAW,
-            "BALANCE_DEPOSIT_STRATEGY_COMMISSION_INNER" => {
-                Self::BALANCE_DEPOSIT_STRATEGY_COMMISSION_INNER
-            }
-            "BALANCE_WITHDRAW_STRATEGY_COMMISSION_INNER" => {
-                Self::BALANCE_WITHDRAW_STRATEGY_COMMISSION_INNER
-            }
+            "BALANCE_DEPOSIT_STRATEGY_COMMISSION_INNER" => Self::BALANCE_DEPOSIT_STRATEGY_COMMISSION_INNER,
+            "BALANCE_WITHDRAW_STRATEGY_COMMISSION_INNER" => Self::BALANCE_WITHDRAW_STRATEGY_COMMISSION_INNER,
             "BALANCE_DEPOSIT_IB_COMMISSIONS" => Self::BALANCE_DEPOSIT_IB_COMMISSIONS,
             "BALANCE_WITHDRAW_IB_SHARED_PERCENTAGE" => Self::BALANCE_WITHDRAW_IB_SHARED_PERCENTAGE,
-            "BALANCE_DEPOSIT_IB_SHARED_PERCENTAGE_FROM_SUB_IB" => {
-                Self::BALANCE_DEPOSIT_IB_SHARED_PERCENTAGE_FROM_SUB_IB
-            }
-            "BALANCE_DEPOSIT_IB_SHARED_PERCENTAGE_FROM_BROKER" => {
-                Self::BALANCE_DEPOSIT_IB_SHARED_PERCENTAGE_FROM_BROKER
-            }
+            "BALANCE_DEPOSIT_IB_SHARED_PERCENTAGE_FROM_SUB_IB" => Self::BALANCE_DEPOSIT_IB_SHARED_PERCENTAGE_FROM_SUB_IB,
+            "BALANCE_DEPOSIT_IB_SHARED_PERCENTAGE_FROM_BROKER" => Self::BALANCE_DEPOSIT_IB_SHARED_PERCENTAGE_FROM_BROKER,
             "BALANCE_DEPOSIT_REBATE" => Self::BALANCE_DEPOSIT_REBATE,
             "BALANCE_WITHDRAW_REBATE" => Self::BALANCE_WITHDRAW_REBATE,
-            "BALANCE_DEPOSIT_STRATEGY_COMMISSION_OUTER" => {
-                Self::BALANCE_DEPOSIT_STRATEGY_COMMISSION_OUTER
-            }
-            "BALANCE_WITHDRAW_STRATEGY_COMMISSION_OUTER" => {
-                Self::BALANCE_WITHDRAW_STRATEGY_COMMISSION_OUTER
-            }
+            "BALANCE_DEPOSIT_STRATEGY_COMMISSION_OUTER" => Self::BALANCE_DEPOSIT_STRATEGY_COMMISSION_OUTER,
+            "BALANCE_WITHDRAW_STRATEGY_COMMISSION_OUTER" => Self::BALANCE_WITHDRAW_STRATEGY_COMMISSION_OUTER,
             "BALANCE_WITHDRAW_BONUS_COMPENSATION" => Self::BALANCE_WITHDRAW_BONUS_COMPENSATION,
-            "BALANCE_WITHDRAW_IB_SHARED_PERCENTAGE_TO_BROKER" => {
-                Self::BALANCE_WITHDRAW_IB_SHARED_PERCENTAGE_TO_BROKER
-            }
+            "BALANCE_WITHDRAW_IB_SHARED_PERCENTAGE_TO_BROKER" => Self::BALANCE_WITHDRAW_IB_SHARED_PERCENTAGE_TO_BROKER,
             "BALANCE_DEPOSIT_DIVIDENDS" => Self::BALANCE_DEPOSIT_DIVIDENDS,
             "BALANCE_WITHDRAW_DIVIDENDS" => Self::BALANCE_WITHDRAW_DIVIDENDS,
             "BALANCE_WITHDRAW_GSL_CHARGE" => Self::BALANCE_WITHDRAW_GSL_CHARGE,
             "BALANCE_WITHDRAW_ROLLOVER" => Self::BALANCE_WITHDRAW_ROLLOVER,
             "BALANCE_DEPOSIT_NONWITHDRAWABLE_BONUS" => Self::BALANCE_DEPOSIT_NONWITHDRAWABLE_BONUS,
-            "BALANCE_WITHDRAW_NONWITHDRAWABLE_BONUS" => {
-                Self::BALANCE_WITHDRAW_NONWITHDRAWABLE_BONUS
-            }
+            "BALANCE_WITHDRAW_NONWITHDRAWABLE_BONUS" => Self::BALANCE_WITHDRAW_NONWITHDRAWABLE_BONUS,
             "BALANCE_DEPOSIT_SWAP" => Self::BALANCE_DEPOSIT_SWAP,
             "BALANCE_WITHDRAW_SWAP" => Self::BALANCE_WITHDRAW_SWAP,
             "BALANCE_DEPOSIT_MANAGEMENT_FEE" => Self::BALANCE_DEPOSIT_MANAGEMENT_FEE,
@@ -1082,9 +1499,7 @@ impl<'a> From<&'a str> for ProtoOAChangeBalanceType {
             "BALANCE_DEPOSIT_TRANSFER" => Self::BALANCE_DEPOSIT_TRANSFER,
             "BALANCE_WITHDRAW_TRANSFER" => Self::BALANCE_WITHDRAW_TRANSFER,
             "BALANCE_DEPOSIT_CONVERTED_BONUS" => Self::BALANCE_DEPOSIT_CONVERTED_BONUS,
-            "BALANCE_DEPOSIT_NEGATIVE_BALANCE_PROTECTION" => {
-                Self::BALANCE_DEPOSIT_NEGATIVE_BALANCE_PROTECTION
-            }
+            "BALANCE_DEPOSIT_NEGATIVE_BALANCE_PROTECTION" => Self::BALANCE_DEPOSIT_NEGATIVE_BALANCE_PROTECTION,
             _ => Self::default(),
         }
     }
@@ -1214,9 +1629,7 @@ impl<'a> MessageRead<'a> for ProtoMessage<'a> {
                 Ok(8) => msg.payloadType = r.read_uint32(bytes)?,
                 Ok(18) => msg.payload = Some(r.read_bytes(bytes).map(Cow::Borrowed)?),
                 Ok(26) => msg.clientMsgId = Some(r.read_string(bytes).map(Cow::Borrowed)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -1226,26 +1639,15 @@ impl<'a> MessageRead<'a> for ProtoMessage<'a> {
 
 impl<'a> MessageWrite for ProtoMessage<'a> {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.payloadType) as u64)
-            + self
-                .payload
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self
-                .clientMsgId
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
+        1 + sizeof_varint(*(&self.payloadType) as u64)
+        + self.payload.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.clientMsgId.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
         w.write_with_tag(8, |w| w.write_uint32(*&self.payloadType))?;
-        self.payload
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(18, |w| w.write_bytes(&m)))?;
-        self.clientMsgId
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(26, |w| w.write_string(&m)))?;
+        self.payload.as_ref().map_or(Ok(()), |m| w.write_with_tag(18, |w| w.write_bytes(&m)))?;
+        self.clientMsgId.as_ref().map_or(Ok(()), |m| w.write_with_tag(26, |w| w.write_string(&m)))?;
         Ok(())
     }
 }
@@ -1268,9 +1670,7 @@ impl<'a> MessageRead<'a> for ProtoErrorRes<'a> {
                 Ok(18) => msg.errorCode = r.read_string(bytes).map(Cow::Borrowed)?,
                 Ok(26) => msg.description = Some(r.read_string(bytes).map(Cow::Borrowed)?),
                 Ok(32) => msg.maintenanceEndTimestamp = Some(r.read_uint64(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -1280,32 +1680,17 @@ impl<'a> MessageRead<'a> for ProtoErrorRes<'a> {
 
 impl<'a> MessageWrite for ProtoErrorRes<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_len((&self.errorCode).len())
-            + self
-                .description
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self
-                .maintenanceEndTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((&self.errorCode).len())
+        + self.description.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.maintenanceEndTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
         w.write_with_tag(18, |w| w.write_string(&self.errorCode))?;
-        self.description
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(26, |w| w.write_string(&m)))?;
-        self.maintenanceEndTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_uint64(*&m)))?;
+        self.description.as_ref().map_or(Ok(()), |m| w.write_with_tag(26, |w| w.write_string(&m)))?;
+        self.maintenanceEndTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_uint64(*&m)))?;
         Ok(())
     }
 }
@@ -1322,9 +1707,7 @@ impl<'a> MessageRead<'a> for ProtoHeartbeatEvent {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -1334,15 +1717,413 @@ impl<'a> MessageRead<'a> for ProtoHeartbeatEvent {
 
 impl MessageWrite for ProtoHeartbeatEvent {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAAsset<'a> {
+    pub assetId: i64,
+    pub name: Cow<'a, str>,
+    pub displayName: Option<Cow<'a, str>>,
+    pub digits: Option<i32>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAAsset<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.assetId = r.read_int64(bytes)?,
+                Ok(18) => msg.name = r.read_string(bytes).map(Cow::Borrowed)?,
+                Ok(26) => msg.displayName = Some(r.read_string(bytes).map(Cow::Borrowed)?),
+                Ok(32) => msg.digits = Some(r.read_int32(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAAsset<'a> {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.assetId) as u64)
+        + 1 + sizeof_len((&self.name).len())
+        + self.displayName.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.digits.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.assetId))?;
+        w.write_with_tag(18, |w| w.write_string(&self.name))?;
+        self.displayName.as_ref().map_or(Ok(()), |m| w.write_with_tag(26, |w| w.write_string(&m)))?;
+        self.digits.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int32(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAInterval {
+    pub startSecond: u32,
+    pub endSecond: u32,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAInterval {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(24) => msg.startSecond = r.read_uint32(bytes)?,
+                Ok(32) => msg.endSecond = r.read_uint32(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAInterval {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.startSecond) as u64)
+        + 1 + sizeof_varint(*(&self.endSecond) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(24, |w| w.write_uint32(*&self.startSecond))?;
+        w.write_with_tag(32, |w| w.write_uint32(*&self.endSecond))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbol<'a> {
+    pub symbolId: i64,
+    pub digits: i32,
+    pub pipPosition: i32,
+    pub enableShortSelling: Option<bool>,
+    pub guaranteedStopLoss: Option<bool>,
+    pub swapRollover3Days: Option<spotware::ProtoOADayOfWeek>,
+    pub swapLong: Option<f64>,
+    pub swapShort: Option<f64>,
+    pub maxVolume: Option<i64>,
+    pub minVolume: Option<i64>,
+    pub stepVolume: Option<i64>,
+    pub maxExposure: Option<u64>,
+    pub schedule: Vec<spotware::ProtoOAInterval>,
+    pub commissionType: Option<spotware::ProtoOACommissionType>,
+    pub slDistance: Option<u32>,
+    pub tpDistance: Option<u32>,
+    pub gslDistance: Option<u32>,
+    pub gslCharge: Option<i64>,
+    pub distanceSetIn: Option<spotware::ProtoOASymbolDistanceType>,
+    pub minCommissionType: Option<spotware::ProtoOAMinCommissionType>,
+    pub minCommissionAsset: Option<Cow<'a, str>>,
+    pub rolloverCommission: Option<i64>,
+    pub skipRolloverDays: Option<i32>,
+    pub scheduleTimeZone: Option<Cow<'a, str>>,
+    pub tradingMode: Option<spotware::ProtoOATradingMode>,
+    pub rolloverCommission3Days: Option<spotware::ProtoOADayOfWeek>,
+    pub swapCalculationType: Option<spotware::ProtoOASwapCalculationType>,
+    pub lotSize: Option<i64>,
+    pub preciseTradingCommissionRate: Option<i64>,
+    pub preciseMinCommission: Option<i64>,
+    pub holiday: Vec<spotware::ProtoOAHoliday<'a>>,
+    pub pnlConversionFeeRate: Option<i32>,
+    pub leverageId: Option<i64>,
+    pub swapPeriod: Option<i32>,
+    pub swapTime: Option<i32>,
+    pub skipSWAPPeriods: Option<i32>,
+    pub chargeSwapAtWeekends: Option<bool>,
+    pub measurementUnits: Option<Cow<'a, str>>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbol<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.symbolId = r.read_int64(bytes)?,
+                Ok(16) => msg.digits = r.read_int32(bytes)?,
+                Ok(24) => msg.pipPosition = r.read_int32(bytes)?,
+                Ok(32) => msg.enableShortSelling = Some(r.read_bool(bytes)?),
+                Ok(40) => msg.guaranteedStopLoss = Some(r.read_bool(bytes)?),
+                Ok(48) => msg.swapRollover3Days = Some(r.read_enum(bytes)?),
+                Ok(57) => msg.swapLong = Some(r.read_double(bytes)?),
+                Ok(65) => msg.swapShort = Some(r.read_double(bytes)?),
+                Ok(72) => msg.maxVolume = Some(r.read_int64(bytes)?),
+                Ok(80) => msg.minVolume = Some(r.read_int64(bytes)?),
+                Ok(88) => msg.stepVolume = Some(r.read_int64(bytes)?),
+                Ok(96) => msg.maxExposure = Some(r.read_uint64(bytes)?),
+                Ok(106) => msg.schedule.push(r.read_message::<spotware::ProtoOAInterval>(bytes)?),
+                Ok(120) => msg.commissionType = Some(r.read_enum(bytes)?),
+                Ok(128) => msg.slDistance = Some(r.read_uint32(bytes)?),
+                Ok(136) => msg.tpDistance = Some(r.read_uint32(bytes)?),
+                Ok(144) => msg.gslDistance = Some(r.read_uint32(bytes)?),
+                Ok(152) => msg.gslCharge = Some(r.read_int64(bytes)?),
+                Ok(160) => msg.distanceSetIn = Some(r.read_enum(bytes)?),
+                Ok(176) => msg.minCommissionType = Some(r.read_enum(bytes)?),
+                Ok(186) => msg.minCommissionAsset = Some(r.read_string(bytes).map(Cow::Borrowed)?),
+                Ok(192) => msg.rolloverCommission = Some(r.read_int64(bytes)?),
+                Ok(200) => msg.skipRolloverDays = Some(r.read_int32(bytes)?),
+                Ok(210) => msg.scheduleTimeZone = Some(r.read_string(bytes).map(Cow::Borrowed)?),
+                Ok(216) => msg.tradingMode = Some(r.read_enum(bytes)?),
+                Ok(224) => msg.rolloverCommission3Days = Some(r.read_enum(bytes)?),
+                Ok(232) => msg.swapCalculationType = Some(r.read_enum(bytes)?),
+                Ok(240) => msg.lotSize = Some(r.read_int64(bytes)?),
+                Ok(248) => msg.preciseTradingCommissionRate = Some(r.read_int64(bytes)?),
+                Ok(256) => msg.preciseMinCommission = Some(r.read_int64(bytes)?),
+                Ok(266) => msg.holiday.push(r.read_message::<spotware::ProtoOAHoliday>(bytes)?),
+                Ok(272) => msg.pnlConversionFeeRate = Some(r.read_int32(bytes)?),
+                Ok(280) => msg.leverageId = Some(r.read_int64(bytes)?),
+                Ok(288) => msg.swapPeriod = Some(r.read_int32(bytes)?),
+                Ok(296) => msg.swapTime = Some(r.read_int32(bytes)?),
+                Ok(304) => msg.skipSWAPPeriods = Some(r.read_int32(bytes)?),
+                Ok(312) => msg.chargeSwapAtWeekends = Some(r.read_bool(bytes)?),
+                Ok(322) => msg.measurementUnits = Some(r.read_string(bytes).map(Cow::Borrowed)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOASymbol<'a> {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.symbolId) as u64)
+        + 1 + sizeof_varint(*(&self.digits) as u64)
+        + 1 + sizeof_varint(*(&self.pipPosition) as u64)
+        + self.enableShortSelling.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.guaranteedStopLoss.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.swapRollover3Days.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.swapLong.as_ref().map_or(0, |&m| 1 + 8)
+        + self.swapShort.as_ref().map_or(0, |&m| 1 + 8)
+        + self.maxVolume.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.minVolume.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.stepVolume.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.maxExposure.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.schedule.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + self.commissionType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.slDistance.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.tpDistance.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.gslDistance.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.gslCharge.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.distanceSetIn.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.minCommissionType.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.minCommissionAsset.as_ref().map_or(0, |m| 2 + sizeof_len((&m).len()))
+        + self.rolloverCommission.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.skipRolloverDays.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.scheduleTimeZone.as_ref().map_or(0, |m| 2 + sizeof_len((&m).len()))
+        + self.tradingMode.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.rolloverCommission3Days.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.swapCalculationType.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.lotSize.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.preciseTradingCommissionRate.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.preciseMinCommission.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.holiday.iter().map(|s| 2 + sizeof_len((s).get_size())).sum::<usize>()
+        + self.pnlConversionFeeRate.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.leverageId.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.swapPeriod.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.swapTime.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.skipSWAPPeriods.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.chargeSwapAtWeekends.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.measurementUnits.as_ref().map_or(0, |m| 2 + sizeof_len((&m).len()))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.symbolId))?;
+        w.write_with_tag(16, |w| w.write_int32(*&self.digits))?;
+        w.write_with_tag(24, |w| w.write_int32(*&self.pipPosition))?;
+        self.enableShortSelling.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_bool(*&m)))?;
+        self.guaranteedStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_bool(*&m)))?;
+        self.swapRollover3Days.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_enum(*&m as i32)))?;
+        self.swapLong.as_ref().map_or(Ok(()), |&m| w.write_with_tag(57, |w| w.write_double(*&m)))?;
+        self.swapShort.as_ref().map_or(Ok(()), |&m| w.write_with_tag(65, |w| w.write_double(*&m)))?;
+        self.maxVolume.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_int64(*&m)))?;
+        self.minVolume.as_ref().map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_int64(*&m)))?;
+        self.stepVolume.as_ref().map_or(Ok(()), |&m| w.write_with_tag(88, |w| w.write_int64(*&m)))?;
+        self.maxExposure.as_ref().map_or(Ok(()), |&m| w.write_with_tag(96, |w| w.write_uint64(*&m)))?;
+        for s in &self.schedule { w.write_with_tag(106, |w| w.write_message(s))?; }
+        self.commissionType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(120, |w| w.write_enum(*&m as i32)))?;
+        self.slDistance.as_ref().map_or(Ok(()), |&m| w.write_with_tag(128, |w| w.write_uint32(*&m)))?;
+        self.tpDistance.as_ref().map_or(Ok(()), |&m| w.write_with_tag(136, |w| w.write_uint32(*&m)))?;
+        self.gslDistance.as_ref().map_or(Ok(()), |&m| w.write_with_tag(144, |w| w.write_uint32(*&m)))?;
+        self.gslCharge.as_ref().map_or(Ok(()), |&m| w.write_with_tag(152, |w| w.write_int64(*&m)))?;
+        self.distanceSetIn.as_ref().map_or(Ok(()), |&m| w.write_with_tag(160, |w| w.write_enum(*&m as i32)))?;
+        self.minCommissionType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(176, |w| w.write_enum(*&m as i32)))?;
+        self.minCommissionAsset.as_ref().map_or(Ok(()), |m| w.write_with_tag(186, |w| w.write_string(&m)))?;
+        self.rolloverCommission.as_ref().map_or(Ok(()), |&m| w.write_with_tag(192, |w| w.write_int64(*&m)))?;
+        self.skipRolloverDays.as_ref().map_or(Ok(()), |&m| w.write_with_tag(200, |w| w.write_int32(*&m)))?;
+        self.scheduleTimeZone.as_ref().map_or(Ok(()), |m| w.write_with_tag(210, |w| w.write_string(&m)))?;
+        self.tradingMode.as_ref().map_or(Ok(()), |&m| w.write_with_tag(216, |w| w.write_enum(*&m as i32)))?;
+        self.rolloverCommission3Days.as_ref().map_or(Ok(()), |&m| w.write_with_tag(224, |w| w.write_enum(*&m as i32)))?;
+        self.swapCalculationType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(232, |w| w.write_enum(*&m as i32)))?;
+        self.lotSize.as_ref().map_or(Ok(()), |&m| w.write_with_tag(240, |w| w.write_int64(*&m)))?;
+        self.preciseTradingCommissionRate.as_ref().map_or(Ok(()), |&m| w.write_with_tag(248, |w| w.write_int64(*&m)))?;
+        self.preciseMinCommission.as_ref().map_or(Ok(()), |&m| w.write_with_tag(256, |w| w.write_int64(*&m)))?;
+        for s in &self.holiday { w.write_with_tag(266, |w| w.write_message(s))?; }
+        self.pnlConversionFeeRate.as_ref().map_or(Ok(()), |&m| w.write_with_tag(272, |w| w.write_int32(*&m)))?;
+        self.leverageId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(280, |w| w.write_int64(*&m)))?;
+        self.swapPeriod.as_ref().map_or(Ok(()), |&m| w.write_with_tag(288, |w| w.write_int32(*&m)))?;
+        self.swapTime.as_ref().map_or(Ok(()), |&m| w.write_with_tag(296, |w| w.write_int32(*&m)))?;
+        self.skipSWAPPeriods.as_ref().map_or(Ok(()), |&m| w.write_with_tag(304, |w| w.write_int32(*&m)))?;
+        self.chargeSwapAtWeekends.as_ref().map_or(Ok(()), |&m| w.write_with_tag(312, |w| w.write_bool(*&m)))?;
+        self.measurementUnits.as_ref().map_or(Ok(()), |m| w.write_with_tag(322, |w| w.write_string(&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOALightSymbol<'a> {
+    pub symbolId: i64,
+    pub symbolName: Option<Cow<'a, str>>,
+    pub enabled: Option<bool>,
+    pub baseAssetId: Option<i64>,
+    pub quoteAssetId: Option<i64>,
+    pub symbolCategoryId: Option<i64>,
+    pub description: Option<Cow<'a, str>>,
+    pub sortingNumber: Option<f64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOALightSymbol<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.symbolId = r.read_int64(bytes)?,
+                Ok(18) => msg.symbolName = Some(r.read_string(bytes).map(Cow::Borrowed)?),
+                Ok(24) => msg.enabled = Some(r.read_bool(bytes)?),
+                Ok(32) => msg.baseAssetId = Some(r.read_int64(bytes)?),
+                Ok(40) => msg.quoteAssetId = Some(r.read_int64(bytes)?),
+                Ok(48) => msg.symbolCategoryId = Some(r.read_int64(bytes)?),
+                Ok(58) => msg.description = Some(r.read_string(bytes).map(Cow::Borrowed)?),
+                Ok(65) => msg.sortingNumber = Some(r.read_double(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOALightSymbol<'a> {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.symbolId) as u64)
+        + self.symbolName.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.enabled.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.baseAssetId.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.quoteAssetId.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.symbolCategoryId.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.description.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.sortingNumber.as_ref().map_or(0, |&m| 1 + 8)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.symbolId))?;
+        self.symbolName.as_ref().map_or(Ok(()), |m| w.write_with_tag(18, |w| w.write_string(&m)))?;
+        self.enabled.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_bool(*&m)))?;
+        self.baseAssetId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
+        self.quoteAssetId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
+        self.symbolCategoryId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_int64(*&m)))?;
+        self.description.as_ref().map_or(Ok(()), |m| w.write_with_tag(58, |w| w.write_string(&m)))?;
+        self.sortingNumber.as_ref().map_or(Ok(()), |&m| w.write_with_tag(65, |w| w.write_double(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAArchivedSymbol<'a> {
+    pub symbolId: i64,
+    pub name: Cow<'a, str>,
+    pub utcLastUpdateTimestamp: i64,
+    pub description: Option<Cow<'a, str>>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAArchivedSymbol<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.symbolId = r.read_int64(bytes)?,
+                Ok(18) => msg.name = r.read_string(bytes).map(Cow::Borrowed)?,
+                Ok(24) => msg.utcLastUpdateTimestamp = r.read_int64(bytes)?,
+                Ok(34) => msg.description = Some(r.read_string(bytes).map(Cow::Borrowed)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAArchivedSymbol<'a> {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.symbolId) as u64)
+        + 1 + sizeof_len((&self.name).len())
+        + 1 + sizeof_varint(*(&self.utcLastUpdateTimestamp) as u64)
+        + self.description.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.symbolId))?;
+        w.write_with_tag(18, |w| w.write_string(&self.name))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.utcLastUpdateTimestamp))?;
+        self.description.as_ref().map_or(Ok(()), |m| w.write_with_tag(34, |w| w.write_string(&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolCategory<'a> {
+    pub id: i64,
+    pub assetClassId: i64,
+    pub name: Cow<'a, str>,
+    pub sortingNumber: Option<f64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolCategory<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.id = r.read_int64(bytes)?,
+                Ok(16) => msg.assetClassId = r.read_int64(bytes)?,
+                Ok(26) => msg.name = r.read_string(bytes).map(Cow::Borrowed)?,
+                Ok(33) => msg.sortingNumber = Some(r.read_double(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOASymbolCategory<'a> {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.id) as u64)
+        + 1 + sizeof_varint(*(&self.assetClassId) as u64)
+        + 1 + sizeof_len((&self.name).len())
+        + self.sortingNumber.as_ref().map_or(0, |&m| 1 + 8)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.id))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.assetClassId))?;
+        w.write_with_tag(26, |w| w.write_string(&self.name))?;
+        self.sortingNumber.as_ref().map_or(Ok(()), |&m| w.write_with_tag(33, |w| w.write_double(*&m)))?;
         Ok(())
     }
 }
@@ -1350,7 +2131,7 @@ impl MessageWrite for ProtoHeartbeatEvent {
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOATrader<'a> {
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub balance: i64,
     pub balanceVersion: Option<i64>,
     pub managerBonus: Option<i64>,
@@ -1367,8 +2148,7 @@ pub struct ProtoOATrader<'a> {
     pub brokerName: Option<Cow<'a, str>>,
     pub registrationTimestamp: Option<i64>,
     pub isLimitedRisk: Option<bool>,
-    pub limitedRiskMarginCalculationStrategy:
-        Option<spotware::ProtoOALimitedRiskMarginCalculationStrategy>,
+    pub limitedRiskMarginCalculationStrategy: Option<spotware::ProtoOALimitedRiskMarginCalculationStrategy>,
     pub moneyDigits: Option<u32>,
     pub fairStopOut: Option<bool>,
     pub stopOutStrategy: Option<spotware::ProtoOAStopOutStrategy>,
@@ -1379,7 +2159,7 @@ impl<'a> MessageRead<'a> for ProtoOATrader<'a> {
         let mut msg = Self::default();
         while !r.is_eof() {
             match r.next_tag(bytes) {
-                Ok(8) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(8) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(16) => msg.balance = r.read_int64(bytes)?,
                 Ok(24) => msg.balanceVersion = Some(r.read_int64(bytes)?),
                 Ok(32) => msg.managerBonus = Some(r.read_int64(bytes)?),
@@ -1400,9 +2180,7 @@ impl<'a> MessageRead<'a> for ProtoOATrader<'a> {
                 Ok(160) => msg.moneyDigits = Some(r.read_uint32(bytes)?),
                 Ok(168) => msg.fairStopOut = Some(r.read_bool(bytes)?),
                 Ok(176) => msg.stopOutStrategy = Some(r.read_enum(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -1412,148 +2190,51 @@ impl<'a> MessageRead<'a> for ProtoOATrader<'a> {
 
 impl<'a> MessageWrite for ProtoOATrader<'a> {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_varint(*(&self.balance) as u64)
-            + self
-                .balanceVersion
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .managerBonus
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .ibBonus
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .nonWithdrawableBonus
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .accessRights
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.depositAssetId) as u64)
-            + self
-                .swapFree
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .leverageInCents
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .totalMarginCalculationType
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .maxLeverage
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .traderLogin
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .accountType
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .brokerName
-                .as_ref()
-                .map_or(0, |m| 2 + sizeof_len((&m).len()))
-            + self
-                .registrationTimestamp
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .isLimitedRisk
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .limitedRiskMarginCalculationStrategy
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .moneyDigits
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .fairStopOut
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .stopOutStrategy
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.balance) as u64)
+        + self.balanceVersion.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.managerBonus.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.ibBonus.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.nonWithdrawableBonus.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.accessRights.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.depositAssetId) as u64)
+        + self.swapFree.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.leverageInCents.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.totalMarginCalculationType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.maxLeverage.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.traderLogin.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.accountType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.brokerName.as_ref().map_or(0, |m| 2 + sizeof_len((&m).len()))
+        + self.registrationTimestamp.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.isLimitedRisk.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.limitedRiskMarginCalculationStrategy.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.moneyDigits.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.fairStopOut.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.stopOutStrategy.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        w.write_with_tag(8, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(8, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(16, |w| w.write_int64(*&self.balance))?;
-        self.balanceVersion
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
-        self.managerBonus
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
-        self.ibBonus
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
-        self.nonWithdrawableBonus
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_int64(*&m)))?;
-        self.accessRights.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(56, |w| w.write_enum(*&m as i32))
-        })?;
+        self.balanceVersion.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
+        self.managerBonus.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
+        self.ibBonus.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
+        self.nonWithdrawableBonus.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_int64(*&m)))?;
+        self.accessRights.as_ref().map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_enum(*&m as i32)))?;
         w.write_with_tag(64, |w| w.write_int64(*&self.depositAssetId))?;
-        self.swapFree
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_bool(*&m)))?;
-        self.leverageInCents
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_uint32(*&m)))?;
-        self.totalMarginCalculationType
-            .as_ref()
-            .map_or(Ok(()), |&m| {
-                w.write_with_tag(88, |w| w.write_enum(*&m as i32))
-            })?;
-        self.maxLeverage
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(96, |w| w.write_uint32(*&m)))?;
-        self.traderLogin
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(112, |w| w.write_int64(*&m)))?;
-        self.accountType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(120, |w| w.write_enum(*&m as i32))
-        })?;
-        self.brokerName
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(130, |w| w.write_string(&m)))?;
-        self.registrationTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(136, |w| w.write_int64(*&m)))?;
-        self.isLimitedRisk
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(144, |w| w.write_bool(*&m)))?;
-        self.limitedRiskMarginCalculationStrategy
-            .as_ref()
-            .map_or(Ok(()), |&m| {
-                w.write_with_tag(152, |w| w.write_enum(*&m as i32))
-            })?;
-        self.moneyDigits
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(160, |w| w.write_uint32(*&m)))?;
-        self.fairStopOut
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(168, |w| w.write_bool(*&m)))?;
-        self.stopOutStrategy.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(176, |w| w.write_enum(*&m as i32))
-        })?;
+        self.swapFree.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_bool(*&m)))?;
+        self.leverageInCents.as_ref().map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_uint32(*&m)))?;
+        self.totalMarginCalculationType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(88, |w| w.write_enum(*&m as i32)))?;
+        self.maxLeverage.as_ref().map_or(Ok(()), |&m| w.write_with_tag(96, |w| w.write_uint32(*&m)))?;
+        self.traderLogin.as_ref().map_or(Ok(()), |&m| w.write_with_tag(112, |w| w.write_int64(*&m)))?;
+        self.accountType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(120, |w| w.write_enum(*&m as i32)))?;
+        self.brokerName.as_ref().map_or(Ok(()), |m| w.write_with_tag(130, |w| w.write_string(&m)))?;
+        self.registrationTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(136, |w| w.write_int64(*&m)))?;
+        self.isLimitedRisk.as_ref().map_or(Ok(()), |&m| w.write_with_tag(144, |w| w.write_bool(*&m)))?;
+        self.limitedRiskMarginCalculationStrategy.as_ref().map_or(Ok(()), |&m| w.write_with_tag(152, |w| w.write_enum(*&m as i32)))?;
+        self.moneyDigits.as_ref().map_or(Ok(()), |&m| w.write_with_tag(160, |w| w.write_uint32(*&m)))?;
+        self.fairStopOut.as_ref().map_or(Ok(()), |&m| w.write_with_tag(168, |w| w.write_bool(*&m)))?;
+        self.stopOutStrategy.as_ref().map_or(Ok(()), |&m| w.write_with_tag(176, |w| w.write_enum(*&m as i32)))?;
         Ok(())
     }
 }
@@ -1586,9 +2267,7 @@ impl<'a> MessageRead<'a> for ProtoOATradeData<'a> {
                 Ok(58) => msg.comment = Some(r.read_string(bytes).map(Cow::Borrowed)?),
                 Ok(66) => msg.measurementUnits = Some(r.read_string(bytes).map(Cow::Borrowed)?),
                 Ok(72) => msg.closeTimestamp = Some(r.read_uint64(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -1598,60 +2277,27 @@ impl<'a> MessageRead<'a> for ProtoOATradeData<'a> {
 
 impl<'a> MessageWrite for ProtoOATradeData<'a> {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.symbolId) as u64)
-            + 1
-            + sizeof_varint(*(&self.volume) as u64)
-            + 1
-            + sizeof_varint(*(&self.tradeSide) as u64)
-            + self
-                .openTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .label
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self
-                .guaranteedStopLoss
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .comment
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self
-                .measurementUnits
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self
-                .closeTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        1 + sizeof_varint(*(&self.symbolId) as u64)
+        + 1 + sizeof_varint(*(&self.volume) as u64)
+        + 1 + sizeof_varint(*(&self.tradeSide) as u64)
+        + self.openTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.label.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.guaranteedStopLoss.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.comment.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.measurementUnits.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.closeTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
         w.write_with_tag(8, |w| w.write_int64(*&self.symbolId))?;
         w.write_with_tag(16, |w| w.write_int64(*&self.volume))?;
         w.write_with_tag(24, |w| w.write_enum(*&self.tradeSide as i32))?;
-        self.openTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
-        self.label
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(42, |w| w.write_string(&m)))?;
-        self.guaranteedStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_bool(*&m)))?;
-        self.comment
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(58, |w| w.write_string(&m)))?;
-        self.measurementUnits
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(66, |w| w.write_string(&m)))?;
-        self.closeTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_uint64(*&m)))?;
+        self.openTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
+        self.label.as_ref().map_or(Ok(()), |m| w.write_with_tag(42, |w| w.write_string(&m)))?;
+        self.guaranteedStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_bool(*&m)))?;
+        self.comment.as_ref().map_or(Ok(()), |m| w.write_with_tag(58, |w| w.write_string(&m)))?;
+        self.measurementUnits.as_ref().map_or(Ok(()), |m| w.write_with_tag(66, |w| w.write_string(&m)))?;
+        self.closeTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_uint64(*&m)))?;
         Ok(())
     }
 }
@@ -1663,12 +2309,12 @@ pub struct ProtoOAPosition<'a> {
     pub tradeData: spotware::ProtoOATradeData<'a>,
     pub positionStatus: spotware::ProtoOAPositionStatus,
     pub swap: i64,
-    pub price: Option<f32>,
-    pub stopLoss: Option<f32>,
-    pub takeProfit: Option<f32>,
+    pub price: Option<f64>,
+    pub stopLoss: Option<f64>,
+    pub takeProfit: Option<f64>,
     pub utcLastUpdateTimestamp: Option<i64>,
     pub commission: Option<i64>,
-    pub marginRate: Option<f32>,
+    pub marginRate: Option<f64>,
     pub mirroringCommission: Option<i64>,
     pub guaranteedStopLoss: Option<bool>,
     pub usedMargin: Option<u64>,
@@ -1686,21 +2332,19 @@ impl<'a> MessageRead<'a> for ProtoOAPosition<'a> {
                 Ok(18) => msg.tradeData = r.read_message::<spotware::ProtoOATradeData>(bytes)?,
                 Ok(24) => msg.positionStatus = r.read_enum(bytes)?,
                 Ok(32) => msg.swap = r.read_int64(bytes)?,
-                Ok(45) => msg.price = Some(r.read_float(bytes)?),
-                Ok(53) => msg.stopLoss = Some(r.read_float(bytes)?),
-                Ok(61) => msg.takeProfit = Some(r.read_float(bytes)?),
+                Ok(41) => msg.price = Some(r.read_double(bytes)?),
+                Ok(49) => msg.stopLoss = Some(r.read_double(bytes)?),
+                Ok(57) => msg.takeProfit = Some(r.read_double(bytes)?),
                 Ok(64) => msg.utcLastUpdateTimestamp = Some(r.read_int64(bytes)?),
                 Ok(72) => msg.commission = Some(r.read_int64(bytes)?),
-                Ok(85) => msg.marginRate = Some(r.read_float(bytes)?),
+                Ok(81) => msg.marginRate = Some(r.read_double(bytes)?),
                 Ok(88) => msg.mirroringCommission = Some(r.read_int64(bytes)?),
                 Ok(96) => msg.guaranteedStopLoss = Some(r.read_bool(bytes)?),
                 Ok(104) => msg.usedMargin = Some(r.read_uint64(bytes)?),
                 Ok(112) => msg.stopLossTriggerMethod = Some(r.read_enum(bytes)?),
                 Ok(120) => msg.moneyDigits = Some(r.read_uint32(bytes)?),
                 Ok(128) => msg.trailingStopLoss = Some(r.read_bool(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -1710,50 +2354,22 @@ impl<'a> MessageRead<'a> for ProtoOAPosition<'a> {
 
 impl<'a> MessageWrite for ProtoOAPosition<'a> {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.positionId) as u64)
-            + 1
-            + sizeof_len((self.tradeData).get_size())
-            + 1
-            + sizeof_varint(*(&self.positionStatus) as u64)
-            + 1
-            + sizeof_varint(*(&self.swap) as u64)
-            + self.price.as_ref().map_or(0, |&m| 1 + 4)
-            + self.stopLoss.as_ref().map_or(0, |&m| 1 + 4)
-            + self.takeProfit.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .utcLastUpdateTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .commission
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self.marginRate.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .mirroringCommission
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .guaranteedStopLoss
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .usedMargin
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .stopLossTriggerMethod
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .moneyDigits
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .trailingStopLoss
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        1 + sizeof_varint(*(&self.positionId) as u64)
+        + 1 + sizeof_len((self.tradeData).get_size())
+        + 1 + sizeof_varint(*(&self.positionStatus) as u64)
+        + 1 + sizeof_varint(*(&self.swap) as u64)
+        + self.price.as_ref().map_or(0, |&m| 1 + 8)
+        + self.stopLoss.as_ref().map_or(0, |&m| 1 + 8)
+        + self.takeProfit.as_ref().map_or(0, |&m| 1 + 8)
+        + self.utcLastUpdateTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.commission.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.marginRate.as_ref().map_or(0, |&m| 1 + 8)
+        + self.mirroringCommission.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.guaranteedStopLoss.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.usedMargin.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.stopLossTriggerMethod.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.moneyDigits.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.trailingStopLoss.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
@@ -1761,42 +2377,18 @@ impl<'a> MessageWrite for ProtoOAPosition<'a> {
         w.write_with_tag(18, |w| w.write_message(&self.tradeData))?;
         w.write_with_tag(24, |w| w.write_enum(*&self.positionStatus as i32))?;
         w.write_with_tag(32, |w| w.write_int64(*&self.swap))?;
-        self.price
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(45, |w| w.write_float(*&m)))?;
-        self.stopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(53, |w| w.write_float(*&m)))?;
-        self.takeProfit
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(61, |w| w.write_float(*&m)))?;
-        self.utcLastUpdateTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
-        self.commission
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_int64(*&m)))?;
-        self.marginRate
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(85, |w| w.write_float(*&m)))?;
-        self.mirroringCommission
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(88, |w| w.write_int64(*&m)))?;
-        self.guaranteedStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(96, |w| w.write_bool(*&m)))?;
-        self.usedMargin
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(104, |w| w.write_uint64(*&m)))?;
-        self.stopLossTriggerMethod.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(112, |w| w.write_enum(*&m as i32))
-        })?;
-        self.moneyDigits
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(120, |w| w.write_uint32(*&m)))?;
-        self.trailingStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(128, |w| w.write_bool(*&m)))?;
+        self.price.as_ref().map_or(Ok(()), |&m| w.write_with_tag(41, |w| w.write_double(*&m)))?;
+        self.stopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(49, |w| w.write_double(*&m)))?;
+        self.takeProfit.as_ref().map_or(Ok(()), |&m| w.write_with_tag(57, |w| w.write_double(*&m)))?;
+        self.utcLastUpdateTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
+        self.commission.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_int64(*&m)))?;
+        self.marginRate.as_ref().map_or(Ok(()), |&m| w.write_with_tag(81, |w| w.write_double(*&m)))?;
+        self.mirroringCommission.as_ref().map_or(Ok(()), |&m| w.write_with_tag(88, |w| w.write_int64(*&m)))?;
+        self.guaranteedStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(96, |w| w.write_bool(*&m)))?;
+        self.usedMargin.as_ref().map_or(Ok(()), |&m| w.write_with_tag(104, |w| w.write_uint64(*&m)))?;
+        self.stopLossTriggerMethod.as_ref().map_or(Ok(()), |&m| w.write_with_tag(112, |w| w.write_enum(*&m as i32)))?;
+        self.moneyDigits.as_ref().map_or(Ok(()), |&m| w.write_with_tag(120, |w| w.write_uint32(*&m)))?;
+        self.trailingStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(128, |w| w.write_bool(*&m)))?;
         Ok(())
     }
 }
@@ -1809,16 +2401,16 @@ pub struct ProtoOAOrder<'a> {
     pub orderType: spotware::ProtoOAOrderType,
     pub orderStatus: spotware::ProtoOAOrderStatus,
     pub expirationTimestamp: Option<i64>,
-    pub executionPrice: Option<f32>,
+    pub executionPrice: Option<f64>,
     pub executedVolume: Option<i64>,
     pub utcLastUpdateTimestamp: Option<i64>,
-    pub baseSlippagePrice: Option<f32>,
+    pub baseSlippagePrice: Option<f64>,
     pub slippageInPoints: Option<i64>,
     pub closingOrder: Option<bool>,
-    pub limitPrice: Option<f32>,
-    pub stopPrice: Option<f32>,
-    pub stopLoss: Option<f32>,
-    pub takeProfit: Option<f32>,
+    pub limitPrice: Option<f64>,
+    pub stopPrice: Option<f64>,
+    pub stopLoss: Option<f64>,
+    pub takeProfit: Option<f64>,
     pub clientOrderId: Option<Cow<'a, str>>,
     pub timeInForce: Option<spotware::ProtoOATimeInForce>,
     pub positionId: Option<i64>,
@@ -1839,16 +2431,16 @@ impl<'a> MessageRead<'a> for ProtoOAOrder<'a> {
                 Ok(24) => msg.orderType = r.read_enum(bytes)?,
                 Ok(32) => msg.orderStatus = r.read_enum(bytes)?,
                 Ok(48) => msg.expirationTimestamp = Some(r.read_int64(bytes)?),
-                Ok(61) => msg.executionPrice = Some(r.read_float(bytes)?),
+                Ok(57) => msg.executionPrice = Some(r.read_double(bytes)?),
                 Ok(64) => msg.executedVolume = Some(r.read_int64(bytes)?),
                 Ok(72) => msg.utcLastUpdateTimestamp = Some(r.read_int64(bytes)?),
-                Ok(85) => msg.baseSlippagePrice = Some(r.read_float(bytes)?),
+                Ok(81) => msg.baseSlippagePrice = Some(r.read_double(bytes)?),
                 Ok(88) => msg.slippageInPoints = Some(r.read_int64(bytes)?),
                 Ok(96) => msg.closingOrder = Some(r.read_bool(bytes)?),
-                Ok(109) => msg.limitPrice = Some(r.read_float(bytes)?),
-                Ok(117) => msg.stopPrice = Some(r.read_float(bytes)?),
-                Ok(125) => msg.stopLoss = Some(r.read_float(bytes)?),
-                Ok(133) => msg.takeProfit = Some(r.read_float(bytes)?),
+                Ok(105) => msg.limitPrice = Some(r.read_double(bytes)?),
+                Ok(113) => msg.stopPrice = Some(r.read_double(bytes)?),
+                Ok(121) => msg.stopLoss = Some(r.read_double(bytes)?),
+                Ok(129) => msg.takeProfit = Some(r.read_double(bytes)?),
                 Ok(138) => msg.clientOrderId = Some(r.read_string(bytes).map(Cow::Borrowed)?),
                 Ok(144) => msg.timeInForce = Some(r.read_enum(bytes)?),
                 Ok(152) => msg.positionId = Some(r.read_int64(bytes)?),
@@ -1857,9 +2449,7 @@ impl<'a> MessageRead<'a> for ProtoOAOrder<'a> {
                 Ok(176) => msg.isStopOut = Some(r.read_bool(bytes)?),
                 Ok(184) => msg.trailingStopLoss = Some(r.read_bool(bytes)?),
                 Ok(192) => msg.stopTriggerMethod = Some(r.read_enum(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -1869,72 +2459,29 @@ impl<'a> MessageRead<'a> for ProtoOAOrder<'a> {
 
 impl<'a> MessageWrite for ProtoOAOrder<'a> {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.orderId) as u64)
-            + 1
-            + sizeof_len((self.tradeData).get_size())
-            + 1
-            + sizeof_varint(*(&self.orderType) as u64)
-            + 1
-            + sizeof_varint(*(&self.orderStatus) as u64)
-            + self
-                .expirationTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self.executionPrice.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .executedVolume
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .utcLastUpdateTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self.baseSlippagePrice.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .slippageInPoints
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .closingOrder
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self.limitPrice.as_ref().map_or(0, |&m| 1 + 4)
-            + self.stopPrice.as_ref().map_or(0, |&m| 1 + 4)
-            + self.stopLoss.as_ref().map_or(0, |&m| 1 + 4)
-            + self.takeProfit.as_ref().map_or(0, |&m| 2 + 4)
-            + self
-                .clientOrderId
-                .as_ref()
-                .map_or(0, |m| 2 + sizeof_len((&m).len()))
-            + self
-                .timeInForce
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .positionId
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .relativeStopLoss
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .relativeTakeProfit
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .isStopOut
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .trailingStopLoss
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .stopTriggerMethod
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        1 + sizeof_varint(*(&self.orderId) as u64)
+        + 1 + sizeof_len((self.tradeData).get_size())
+        + 1 + sizeof_varint(*(&self.orderType) as u64)
+        + 1 + sizeof_varint(*(&self.orderStatus) as u64)
+        + self.expirationTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.executionPrice.as_ref().map_or(0, |&m| 1 + 8)
+        + self.executedVolume.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.utcLastUpdateTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.baseSlippagePrice.as_ref().map_or(0, |&m| 1 + 8)
+        + self.slippageInPoints.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.closingOrder.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.limitPrice.as_ref().map_or(0, |&m| 1 + 8)
+        + self.stopPrice.as_ref().map_or(0, |&m| 1 + 8)
+        + self.stopLoss.as_ref().map_or(0, |&m| 1 + 8)
+        + self.takeProfit.as_ref().map_or(0, |&m| 2 + 8)
+        + self.clientOrderId.as_ref().map_or(0, |m| 2 + sizeof_len((&m).len()))
+        + self.timeInForce.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.positionId.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.relativeStopLoss.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.relativeTakeProfit.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.isStopOut.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.trailingStopLoss.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.stopTriggerMethod.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
@@ -1942,63 +2489,25 @@ impl<'a> MessageWrite for ProtoOAOrder<'a> {
         w.write_with_tag(18, |w| w.write_message(&self.tradeData))?;
         w.write_with_tag(24, |w| w.write_enum(*&self.orderType as i32))?;
         w.write_with_tag(32, |w| w.write_enum(*&self.orderStatus as i32))?;
-        self.expirationTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_int64(*&m)))?;
-        self.executionPrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(61, |w| w.write_float(*&m)))?;
-        self.executedVolume
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
-        self.utcLastUpdateTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_int64(*&m)))?;
-        self.baseSlippagePrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(85, |w| w.write_float(*&m)))?;
-        self.slippageInPoints
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(88, |w| w.write_int64(*&m)))?;
-        self.closingOrder
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(96, |w| w.write_bool(*&m)))?;
-        self.limitPrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(109, |w| w.write_float(*&m)))?;
-        self.stopPrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(117, |w| w.write_float(*&m)))?;
-        self.stopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(125, |w| w.write_float(*&m)))?;
-        self.takeProfit
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(133, |w| w.write_float(*&m)))?;
-        self.clientOrderId
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(138, |w| w.write_string(&m)))?;
-        self.timeInForce.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(144, |w| w.write_enum(*&m as i32))
-        })?;
-        self.positionId
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(152, |w| w.write_int64(*&m)))?;
-        self.relativeStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(160, |w| w.write_int64(*&m)))?;
-        self.relativeTakeProfit
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(168, |w| w.write_int64(*&m)))?;
-        self.isStopOut
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(176, |w| w.write_bool(*&m)))?;
-        self.trailingStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(184, |w| w.write_bool(*&m)))?;
-        self.stopTriggerMethod.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(192, |w| w.write_enum(*&m as i32))
-        })?;
+        self.expirationTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_int64(*&m)))?;
+        self.executionPrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(57, |w| w.write_double(*&m)))?;
+        self.executedVolume.as_ref().map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
+        self.utcLastUpdateTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_int64(*&m)))?;
+        self.baseSlippagePrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(81, |w| w.write_double(*&m)))?;
+        self.slippageInPoints.as_ref().map_or(Ok(()), |&m| w.write_with_tag(88, |w| w.write_int64(*&m)))?;
+        self.closingOrder.as_ref().map_or(Ok(()), |&m| w.write_with_tag(96, |w| w.write_bool(*&m)))?;
+        self.limitPrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(105, |w| w.write_double(*&m)))?;
+        self.stopPrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(113, |w| w.write_double(*&m)))?;
+        self.stopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(121, |w| w.write_double(*&m)))?;
+        self.takeProfit.as_ref().map_or(Ok(()), |&m| w.write_with_tag(129, |w| w.write_double(*&m)))?;
+        self.clientOrderId.as_ref().map_or(Ok(()), |m| w.write_with_tag(138, |w| w.write_string(&m)))?;
+        self.timeInForce.as_ref().map_or(Ok(()), |&m| w.write_with_tag(144, |w| w.write_enum(*&m as i32)))?;
+        self.positionId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(152, |w| w.write_int64(*&m)))?;
+        self.relativeStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(160, |w| w.write_int64(*&m)))?;
+        self.relativeTakeProfit.as_ref().map_or(Ok(()), |&m| w.write_with_tag(168, |w| w.write_int64(*&m)))?;
+        self.isStopOut.as_ref().map_or(Ok(()), |&m| w.write_with_tag(176, |w| w.write_bool(*&m)))?;
+        self.trailingStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(184, |w| w.write_bool(*&m)))?;
+        self.stopTriggerMethod.as_ref().map_or(Ok(()), |&m| w.write_with_tag(192, |w| w.write_enum(*&m as i32)))?;
         Ok(())
     }
 }
@@ -2033,9 +2542,7 @@ impl<'a> MessageRead<'a> for ProtoOABonusDepositWithdraw<'a> {
                 Ok(66) => msg.externalNote = Some(r.read_string(bytes).map(Cow::Borrowed)?),
                 Ok(72) => msg.introducingBrokerId = Some(r.read_int64(bytes)?),
                 Ok(80) => msg.moneyDigits = Some(r.read_uint32(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2045,32 +2552,16 @@ impl<'a> MessageRead<'a> for ProtoOABonusDepositWithdraw<'a> {
 
 impl<'a> MessageWrite for ProtoOABonusDepositWithdraw<'a> {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.operationType) as u64)
-            + 1
-            + sizeof_varint(*(&self.bonusHistoryId) as u64)
-            + 1
-            + sizeof_varint(*(&self.managerBonus) as u64)
-            + 1
-            + sizeof_varint(*(&self.managerDelta) as u64)
-            + 1
-            + sizeof_varint(*(&self.ibBonus) as u64)
-            + 1
-            + sizeof_varint(*(&self.ibDelta) as u64)
-            + 1
-            + sizeof_varint(*(&self.changeBonusTimestamp) as u64)
-            + self
-                .externalNote
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self
-                .introducingBrokerId
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .moneyDigits
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        1 + sizeof_varint(*(&self.operationType) as u64)
+        + 1 + sizeof_varint(*(&self.bonusHistoryId) as u64)
+        + 1 + sizeof_varint(*(&self.managerBonus) as u64)
+        + 1 + sizeof_varint(*(&self.managerDelta) as u64)
+        + 1 + sizeof_varint(*(&self.ibBonus) as u64)
+        + 1 + sizeof_varint(*(&self.ibDelta) as u64)
+        + 1 + sizeof_varint(*(&self.changeBonusTimestamp) as u64)
+        + self.externalNote.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.introducingBrokerId.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.moneyDigits.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
@@ -2081,15 +2572,9 @@ impl<'a> MessageWrite for ProtoOABonusDepositWithdraw<'a> {
         w.write_with_tag(40, |w| w.write_int64(*&self.ibBonus))?;
         w.write_with_tag(48, |w| w.write_int64(*&self.ibDelta))?;
         w.write_with_tag(56, |w| w.write_int64(*&self.changeBonusTimestamp))?;
-        self.externalNote
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(66, |w| w.write_string(&m)))?;
-        self.introducingBrokerId
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_int64(*&m)))?;
-        self.moneyDigits
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_uint32(*&m)))?;
+        self.externalNote.as_ref().map_or(Ok(()), |m| w.write_with_tag(66, |w| w.write_string(&m)))?;
+        self.introducingBrokerId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_int64(*&m)))?;
+        self.moneyDigits.as_ref().map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_uint32(*&m)))?;
         Ok(())
     }
 }
@@ -2122,9 +2607,7 @@ impl<'a> MessageRead<'a> for ProtoOADepositWithdraw<'a> {
                 Ok(56) => msg.balanceVersion = Some(r.read_int64(bytes)?),
                 Ok(64) => msg.equity = Some(r.read_int64(bytes)?),
                 Ok(72) => msg.moneyDigits = Some(r.read_uint32(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2134,32 +2617,15 @@ impl<'a> MessageRead<'a> for ProtoOADepositWithdraw<'a> {
 
 impl<'a> MessageWrite for ProtoOADepositWithdraw<'a> {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.operationType) as u64)
-            + 1
-            + sizeof_varint(*(&self.balanceHistoryId) as u64)
-            + 1
-            + sizeof_varint(*(&self.balance) as u64)
-            + 1
-            + sizeof_varint(*(&self.delta) as u64)
-            + 1
-            + sizeof_varint(*(&self.changeBalanceTimestamp) as u64)
-            + self
-                .externalNote
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self
-                .balanceVersion
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .equity
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .moneyDigits
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        1 + sizeof_varint(*(&self.operationType) as u64)
+        + 1 + sizeof_varint(*(&self.balanceHistoryId) as u64)
+        + 1 + sizeof_varint(*(&self.balance) as u64)
+        + 1 + sizeof_varint(*(&self.delta) as u64)
+        + 1 + sizeof_varint(*(&self.changeBalanceTimestamp) as u64)
+        + self.externalNote.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.balanceVersion.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.equity.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.moneyDigits.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
@@ -2168,18 +2634,10 @@ impl<'a> MessageWrite for ProtoOADepositWithdraw<'a> {
         w.write_with_tag(24, |w| w.write_int64(*&self.balance))?;
         w.write_with_tag(32, |w| w.write_int64(*&self.delta))?;
         w.write_with_tag(40, |w| w.write_int64(*&self.changeBalanceTimestamp))?;
-        self.externalNote
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(50, |w| w.write_string(&m)))?;
-        self.balanceVersion
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_int64(*&m)))?;
-        self.equity
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
-        self.moneyDigits
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_uint32(*&m)))?;
+        self.externalNote.as_ref().map_or(Ok(()), |m| w.write_with_tag(50, |w| w.write_string(&m)))?;
+        self.balanceVersion.as_ref().map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_int64(*&m)))?;
+        self.equity.as_ref().map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
+        self.moneyDigits.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_uint32(*&m)))?;
         Ok(())
     }
 }
@@ -2196,12 +2654,12 @@ pub struct ProtoOADeal {
     pub createTimestamp: i64,
     pub executionTimestamp: i64,
     pub utcLastUpdateTimestamp: Option<i64>,
-    pub executionPrice: Option<f32>,
+    pub executionPrice: Option<f64>,
     pub tradeSide: spotware::ProtoOATradeSide,
     pub dealStatus: spotware::ProtoOADealStatus,
-    pub marginRate: Option<f32>,
+    pub marginRate: Option<f64>,
     pub commission: Option<i64>,
-    pub baseToUsdConversionRate: Option<f32>,
+    pub baseToUsdConversionRate: Option<f64>,
     pub closePositionDetail: Option<spotware::ProtoOAClosePositionDetail>,
     pub moneyDigits: Option<u32>,
 }
@@ -2220,20 +2678,15 @@ impl<'a> MessageRead<'a> for ProtoOADeal {
                 Ok(56) => msg.createTimestamp = r.read_int64(bytes)?,
                 Ok(64) => msg.executionTimestamp = r.read_int64(bytes)?,
                 Ok(72) => msg.utcLastUpdateTimestamp = Some(r.read_int64(bytes)?),
-                Ok(85) => msg.executionPrice = Some(r.read_float(bytes)?),
+                Ok(81) => msg.executionPrice = Some(r.read_double(bytes)?),
                 Ok(88) => msg.tradeSide = r.read_enum(bytes)?,
                 Ok(96) => msg.dealStatus = r.read_enum(bytes)?,
-                Ok(109) => msg.marginRate = Some(r.read_float(bytes)?),
+                Ok(105) => msg.marginRate = Some(r.read_double(bytes)?),
                 Ok(112) => msg.commission = Some(r.read_int64(bytes)?),
-                Ok(125) => msg.baseToUsdConversionRate = Some(r.read_float(bytes)?),
-                Ok(130) => {
-                    msg.closePositionDetail =
-                        Some(r.read_message::<spotware::ProtoOAClosePositionDetail>(bytes)?)
-                }
+                Ok(121) => msg.baseToUsdConversionRate = Some(r.read_double(bytes)?),
+                Ok(130) => msg.closePositionDetail = Some(r.read_message::<spotware::ProtoOAClosePositionDetail>(bytes)?),
                 Ok(136) => msg.moneyDigits = Some(r.read_uint32(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2243,45 +2696,23 @@ impl<'a> MessageRead<'a> for ProtoOADeal {
 
 impl MessageWrite for ProtoOADeal {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.dealId) as u64)
-            + 1
-            + sizeof_varint(*(&self.orderId) as u64)
-            + 1
-            + sizeof_varint(*(&self.positionId) as u64)
-            + 1
-            + sizeof_varint(*(&self.volume) as u64)
-            + 1
-            + sizeof_varint(*(&self.filledVolume) as u64)
-            + 1
-            + sizeof_varint(*(&self.symbolId) as u64)
-            + 1
-            + sizeof_varint(*(&self.createTimestamp) as u64)
-            + 1
-            + sizeof_varint(*(&self.executionTimestamp) as u64)
-            + self
-                .utcLastUpdateTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self.executionPrice.as_ref().map_or(0, |&m| 1 + 4)
-            + 1
-            + sizeof_varint(*(&self.tradeSide) as u64)
-            + 1
-            + sizeof_varint(*(&self.dealStatus) as u64)
-            + self.marginRate.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .commission
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self.baseToUsdConversionRate.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .closePositionDetail
-                .as_ref()
-                .map_or(0, |m| 2 + sizeof_len((m).get_size()))
-            + self
-                .moneyDigits
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        1 + sizeof_varint(*(&self.dealId) as u64)
+        + 1 + sizeof_varint(*(&self.orderId) as u64)
+        + 1 + sizeof_varint(*(&self.positionId) as u64)
+        + 1 + sizeof_varint(*(&self.volume) as u64)
+        + 1 + sizeof_varint(*(&self.filledVolume) as u64)
+        + 1 + sizeof_varint(*(&self.symbolId) as u64)
+        + 1 + sizeof_varint(*(&self.createTimestamp) as u64)
+        + 1 + sizeof_varint(*(&self.executionTimestamp) as u64)
+        + self.utcLastUpdateTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.executionPrice.as_ref().map_or(0, |&m| 1 + 8)
+        + 1 + sizeof_varint(*(&self.tradeSide) as u64)
+        + 1 + sizeof_varint(*(&self.dealStatus) as u64)
+        + self.marginRate.as_ref().map_or(0, |&m| 1 + 8)
+        + self.commission.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.baseToUsdConversionRate.as_ref().map_or(0, |&m| 1 + 8)
+        + self.closePositionDetail.as_ref().map_or(0, |m| 2 + sizeof_len((m).get_size()))
+        + self.moneyDigits.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
@@ -2293,29 +2724,58 @@ impl MessageWrite for ProtoOADeal {
         w.write_with_tag(48, |w| w.write_int64(*&self.symbolId))?;
         w.write_with_tag(56, |w| w.write_int64(*&self.createTimestamp))?;
         w.write_with_tag(64, |w| w.write_int64(*&self.executionTimestamp))?;
-        self.utcLastUpdateTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_int64(*&m)))?;
-        self.executionPrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(85, |w| w.write_float(*&m)))?;
+        self.utcLastUpdateTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_int64(*&m)))?;
+        self.executionPrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(81, |w| w.write_double(*&m)))?;
         w.write_with_tag(88, |w| w.write_enum(*&self.tradeSide as i32))?;
         w.write_with_tag(96, |w| w.write_enum(*&self.dealStatus as i32))?;
-        self.marginRate
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(109, |w| w.write_float(*&m)))?;
-        self.commission
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(112, |w| w.write_int64(*&m)))?;
-        self.baseToUsdConversionRate
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(125, |w| w.write_float(*&m)))?;
-        self.closePositionDetail
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(130, |w| w.write_message(m)))?;
-        self.moneyDigits
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(136, |w| w.write_uint32(*&m)))?;
+        self.marginRate.as_ref().map_or(Ok(()), |&m| w.write_with_tag(105, |w| w.write_double(*&m)))?;
+        self.commission.as_ref().map_or(Ok(()), |&m| w.write_with_tag(112, |w| w.write_int64(*&m)))?;
+        self.baseToUsdConversionRate.as_ref().map_or(Ok(()), |&m| w.write_with_tag(121, |w| w.write_double(*&m)))?;
+        self.closePositionDetail.as_ref().map_or(Ok(()), |m| w.write_with_tag(130, |w| w.write_message(m)))?;
+        self.moneyDigits.as_ref().map_or(Ok(()), |&m| w.write_with_tag(136, |w| w.write_uint32(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADealOffset {
+    pub dealId: i64,
+    pub volume: i64,
+    pub executionTimestamp: Option<i64>,
+    pub executionPrice: Option<f64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADealOffset {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.dealId = r.read_int64(bytes)?,
+                Ok(16) => msg.volume = r.read_int64(bytes)?,
+                Ok(24) => msg.executionTimestamp = Some(r.read_int64(bytes)?),
+                Ok(33) => msg.executionPrice = Some(r.read_double(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADealOffset {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.dealId) as u64)
+        + 1 + sizeof_varint(*(&self.volume) as u64)
+        + self.executionTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.executionPrice.as_ref().map_or(0, |&m| 1 + 8)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.dealId))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.volume))?;
+        self.executionTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
+        self.executionPrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(33, |w| w.write_double(*&m)))?;
         Ok(())
     }
 }
@@ -2323,12 +2783,12 @@ impl MessageWrite for ProtoOADeal {
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAClosePositionDetail {
-    pub entryPrice: f32,
+    pub entryPrice: f64,
     pub grossProfit: i64,
     pub swap: i64,
     pub commission: i64,
     pub balance: i64,
-    pub quoteToDepositConversionRate: Option<f32>,
+    pub quoteToDepositConversionRate: Option<f64>,
     pub closedVolume: Option<i64>,
     pub balanceVersion: Option<i64>,
     pub moneyDigits: Option<u32>,
@@ -2340,19 +2800,17 @@ impl<'a> MessageRead<'a> for ProtoOAClosePositionDetail {
         let mut msg = Self::default();
         while !r.is_eof() {
             match r.next_tag(bytes) {
-                Ok(13) => msg.entryPrice = r.read_float(bytes)?,
+                Ok(9) => msg.entryPrice = r.read_double(bytes)?,
                 Ok(16) => msg.grossProfit = r.read_int64(bytes)?,
                 Ok(24) => msg.swap = r.read_int64(bytes)?,
                 Ok(32) => msg.commission = r.read_int64(bytes)?,
                 Ok(40) => msg.balance = r.read_int64(bytes)?,
-                Ok(53) => msg.quoteToDepositConversionRate = Some(r.read_float(bytes)?),
+                Ok(49) => msg.quoteToDepositConversionRate = Some(r.read_double(bytes)?),
                 Ok(56) => msg.closedVolume = Some(r.read_int64(bytes)?),
                 Ok(64) => msg.balanceVersion = Some(r.read_int64(bytes)?),
                 Ok(72) => msg.moneyDigits = Some(r.read_uint32(bytes)?),
                 Ok(80) => msg.pnlConversionFee = Some(r.read_int64(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2362,59 +2820,29 @@ impl<'a> MessageRead<'a> for ProtoOAClosePositionDetail {
 
 impl MessageWrite for ProtoOAClosePositionDetail {
     fn get_size(&self) -> usize {
-        0 + 1
-            + 4
-            + 1
-            + sizeof_varint(*(&self.grossProfit) as u64)
-            + 1
-            + sizeof_varint(*(&self.swap) as u64)
-            + 1
-            + sizeof_varint(*(&self.commission) as u64)
-            + 1
-            + sizeof_varint(*(&self.balance) as u64)
-            + self
-                .quoteToDepositConversionRate
-                .as_ref()
-                .map_or(0, |&m| 1 + 4)
-            + self
-                .closedVolume
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .balanceVersion
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .moneyDigits
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .pnlConversionFee
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        1 + 8
+        + 1 + sizeof_varint(*(&self.grossProfit) as u64)
+        + 1 + sizeof_varint(*(&self.swap) as u64)
+        + 1 + sizeof_varint(*(&self.commission) as u64)
+        + 1 + sizeof_varint(*(&self.balance) as u64)
+        + self.quoteToDepositConversionRate.as_ref().map_or(0, |&m| 1 + 8)
+        + self.closedVolume.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.balanceVersion.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.moneyDigits.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.pnlConversionFee.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        w.write_with_tag(13, |w| w.write_float(*&self.entryPrice))?;
+        w.write_with_tag(9, |w| w.write_double(*&self.entryPrice))?;
         w.write_with_tag(16, |w| w.write_int64(*&self.grossProfit))?;
         w.write_with_tag(24, |w| w.write_int64(*&self.swap))?;
         w.write_with_tag(32, |w| w.write_int64(*&self.commission))?;
         w.write_with_tag(40, |w| w.write_int64(*&self.balance))?;
-        self.quoteToDepositConversionRate
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(53, |w| w.write_float(*&m)))?;
-        self.closedVolume
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_int64(*&m)))?;
-        self.balanceVersion
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
-        self.moneyDigits
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_uint32(*&m)))?;
-        self.pnlConversionFee
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_int64(*&m)))?;
+        self.quoteToDepositConversionRate.as_ref().map_or(Ok(()), |&m| w.write_with_tag(49, |w| w.write_double(*&m)))?;
+        self.closedVolume.as_ref().map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_int64(*&m)))?;
+        self.balanceVersion.as_ref().map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
+        self.moneyDigits.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_uint32(*&m)))?;
+        self.pnlConversionFee.as_ref().map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_int64(*&m)))?;
         Ok(())
     }
 }
@@ -2443,9 +2871,7 @@ impl<'a> MessageRead<'a> for ProtoOATrendbar {
                 Ok(56) => msg.deltaClose = Some(r.read_uint64(bytes)?),
                 Ok(64) => msg.deltaHigh = Some(r.read_uint64(bytes)?),
                 Ok(72) => msg.utcTimestampInMinutes = Some(r.read_uint32(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2455,54 +2881,128 @@ impl<'a> MessageRead<'a> for ProtoOATrendbar {
 
 impl MessageWrite for ProtoOATrendbar {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.volume) as u64)
-            + self
-                .period
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .low
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .deltaOpen
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .deltaClose
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .deltaHigh
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .utcTimestampInMinutes
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        1 + sizeof_varint(*(&self.volume) as u64)
+        + self.period.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.low.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.deltaOpen.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.deltaClose.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.deltaHigh.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.utcTimestampInMinutes.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
         w.write_with_tag(24, |w| w.write_int64(*&self.volume))?;
-        self.period.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(32, |w| w.write_enum(*&m as i32))
-        })?;
-        self.low
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
-        self.deltaOpen
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_uint64(*&m)))?;
-        self.deltaClose
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_uint64(*&m)))?;
-        self.deltaHigh
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_uint64(*&m)))?;
-        self.utcTimestampInMinutes
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_uint32(*&m)))?;
+        self.period.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_enum(*&m as i32)))?;
+        self.low.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
+        self.deltaOpen.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_uint64(*&m)))?;
+        self.deltaClose.as_ref().map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_uint64(*&m)))?;
+        self.deltaHigh.as_ref().map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_uint64(*&m)))?;
+        self.utcTimestampInMinutes.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_uint32(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAExpectedMargin {
+    pub volume: i64,
+    pub buyMargin: i64,
+    pub sellMargin: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAExpectedMargin {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.volume = r.read_int64(bytes)?,
+                Ok(16) => msg.buyMargin = r.read_int64(bytes)?,
+                Ok(24) => msg.sellMargin = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAExpectedMargin {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.volume) as u64)
+        + 1 + sizeof_varint(*(&self.buyMargin) as u64)
+        + 1 + sizeof_varint(*(&self.sellMargin) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.volume))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.buyMargin))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.sellMargin))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOATickData {
+    pub timestamp: i64,
+    pub tick: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOATickData {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.timestamp = r.read_int64(bytes)?,
+                Ok(16) => msg.tick = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOATickData {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.timestamp) as u64)
+        + 1 + sizeof_varint(*(&self.tick) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.timestamp))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.tick))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOACtidProfile {
+    pub userId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOACtidProfile {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.userId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOACtidProfile {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.userId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.userId))?;
         Ok(())
     }
 }
@@ -2510,7 +3010,7 @@ impl MessageWrite for ProtoOATrendbar {
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOACtidTraderAccount<'a> {
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub isLive: Option<bool>,
     pub traderLogin: Option<i64>,
     pub lastClosingDealTimestamp: Option<i64>,
@@ -2523,15 +3023,13 @@ impl<'a> MessageRead<'a> for ProtoOACtidTraderAccount<'a> {
         let mut msg = Self::default();
         while !r.is_eof() {
             match r.next_tag(bytes) {
-                Ok(8) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(8) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(16) => msg.isLive = Some(r.read_bool(bytes)?),
                 Ok(24) => msg.traderLogin = Some(r.read_int64(bytes)?),
                 Ok(32) => msg.lastClosingDealTimestamp = Some(r.read_int64(bytes)?),
                 Ok(40) => msg.lastBalanceUpdateTimestamp = Some(r.read_int64(bytes)?),
                 Ok(50) => msg.brokerTitleShort = Some(r.read_string(bytes).map(Cow::Borrowed)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2541,47 +3039,142 @@ impl<'a> MessageRead<'a> for ProtoOACtidTraderAccount<'a> {
 
 impl<'a> MessageWrite for ProtoOACtidTraderAccount<'a> {
     fn get_size(&self) -> usize {
-        0 + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + self
-                .isLive
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .traderLogin
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .lastClosingDealTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .lastBalanceUpdateTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .brokerTitleShort
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
+        1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.isLive.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.traderLogin.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.lastClosingDealTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.lastBalanceUpdateTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.brokerTitleShort.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        w.write_with_tag(8, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
-        self.isLive
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(16, |w| w.write_bool(*&m)))?;
-        self.traderLogin
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
-        self.lastClosingDealTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
-        self.lastBalanceUpdateTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
-        self.brokerTitleShort
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(50, |w| w.write_string(&m)))?;
+        w.write_with_tag(8, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        self.isLive.as_ref().map_or(Ok(()), |&m| w.write_with_tag(16, |w| w.write_bool(*&m)))?;
+        self.traderLogin.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
+        self.lastClosingDealTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
+        self.lastBalanceUpdateTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
+        self.brokerTitleShort.as_ref().map_or(Ok(()), |m| w.write_with_tag(50, |w| w.write_string(&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAAssetClass<'a> {
+    pub id: Option<i64>,
+    pub name: Option<Cow<'a, str>>,
+    pub sortingNumber: Option<f64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAAssetClass<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.id = Some(r.read_int64(bytes)?),
+                Ok(18) => msg.name = Some(r.read_string(bytes).map(Cow::Borrowed)?),
+                Ok(25) => msg.sortingNumber = Some(r.read_double(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAAssetClass<'a> {
+    fn get_size(&self) -> usize {
+        self.id.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.name.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.sortingNumber.as_ref().map_or(0, |&m| 1 + 8)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.id.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_int64(*&m)))?;
+        self.name.as_ref().map_or(Ok(()), |m| w.write_with_tag(18, |w| w.write_string(&m)))?;
+        self.sortingNumber.as_ref().map_or(Ok(()), |&m| w.write_with_tag(25, |w| w.write_double(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADepthQuote {
+    pub id: u64,
+    pub size: u64,
+    pub bid: Option<u64>,
+    pub ask: Option<u64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADepthQuote {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.id = r.read_uint64(bytes)?,
+                Ok(24) => msg.size = r.read_uint64(bytes)?,
+                Ok(32) => msg.bid = Some(r.read_uint64(bytes)?),
+                Ok(40) => msg.ask = Some(r.read_uint64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADepthQuote {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.id) as u64)
+        + 1 + sizeof_varint(*(&self.size) as u64)
+        + self.bid.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.ask.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_uint64(*&self.id))?;
+        w.write_with_tag(24, |w| w.write_uint64(*&self.size))?;
+        self.bid.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_uint64(*&m)))?;
+        self.ask.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_uint64(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAMarginCall {
+    pub marginCallType: spotware::ProtoOANotificationType,
+    pub marginLevelThreshold: f64,
+    pub utcLastUpdateTimestamp: Option<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAMarginCall {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.marginCallType = r.read_enum(bytes)?,
+                Ok(17) => msg.marginLevelThreshold = r.read_double(bytes)?,
+                Ok(24) => msg.utcLastUpdateTimestamp = Some(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAMarginCall {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.marginCallType) as u64)
+        + 1 + 8
+        + self.utcLastUpdateTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_enum(*&self.marginCallType as i32))?;
+        w.write_with_tag(17, |w| w.write_double(*&self.marginLevelThreshold))?;
+        self.utcLastUpdateTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
         Ok(())
     }
 }
@@ -2602,9 +3195,7 @@ impl<'a> MessageRead<'a> for ProtoOAApplicationAuthReq<'a> {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
                 Ok(18) => msg.clientId = r.read_string(bytes).map(Cow::Borrowed)?,
                 Ok(26) => msg.clientSecret = r.read_string(bytes).map(Cow::Borrowed)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2614,19 +3205,13 @@ impl<'a> MessageRead<'a> for ProtoOAApplicationAuthReq<'a> {
 
 impl<'a> MessageWrite for ProtoOAApplicationAuthReq<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_len((&self.clientId).len())
-            + 1
-            + sizeof_len((&self.clientSecret).len())
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((&self.clientId).len())
+        + 1 + sizeof_len((&self.clientSecret).len())
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
         w.write_with_tag(18, |w| w.write_string(&self.clientId))?;
         w.write_with_tag(26, |w| w.write_string(&self.clientSecret))?;
         Ok(())
@@ -2645,9 +3230,7 @@ impl<'a> MessageRead<'a> for ProtoOAApplicationAuthRes {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2657,15 +3240,11 @@ impl<'a> MessageRead<'a> for ProtoOAApplicationAuthRes {
 
 impl MessageWrite for ProtoOAApplicationAuthRes {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
         Ok(())
     }
 }
@@ -2674,7 +3253,7 @@ impl MessageWrite for ProtoOAApplicationAuthRes {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAAccountAuthReq<'a> {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub accessToken: Cow<'a, str>,
 }
 
@@ -2684,11 +3263,9 @@ impl<'a> MessageRead<'a> for ProtoOAAccountAuthReq<'a> {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(26) => msg.accessToken = r.read_string(bytes).map(Cow::Borrowed)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2698,20 +3275,14 @@ impl<'a> MessageRead<'a> for ProtoOAAccountAuthReq<'a> {
 
 impl<'a> MessageWrite for ProtoOAAccountAuthReq<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_len((&self.accessToken).len())
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_len((&self.accessToken).len())
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(26, |w| w.write_string(&self.accessToken))?;
         Ok(())
     }
@@ -2721,7 +3292,7 @@ impl<'a> MessageWrite for ProtoOAAccountAuthReq<'a> {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAAccountAuthRes {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
 }
 
 impl<'a> MessageRead<'a> for ProtoOAAccountAuthRes {
@@ -2730,10 +3301,8 @@ impl<'a> MessageRead<'a> for ProtoOAAccountAuthRes {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2743,18 +3312,13 @@ impl<'a> MessageRead<'a> for ProtoOAAccountAuthRes {
 
 impl MessageWrite for ProtoOAAccountAuthRes {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         Ok(())
     }
 }
@@ -2763,7 +3327,7 @@ impl MessageWrite for ProtoOAAccountAuthRes {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAErrorRes<'a> {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: Option<u64>,
+    pub ctidTraderAccountId: Option<i64>,
     pub errorCode: Cow<'a, str>,
     pub description: Option<Cow<'a, str>>,
     pub maintenanceEndTimestamp: Option<i64>,
@@ -2776,14 +3340,12 @@ impl<'a> MessageRead<'a> for ProtoOAErrorRes<'a> {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = Some(r.read_uint64(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = Some(r.read_int64(bytes)?),
                 Ok(26) => msg.errorCode = r.read_string(bytes).map(Cow::Borrowed)?,
                 Ok(34) => msg.description = Some(r.read_string(bytes).map(Cow::Borrowed)?),
                 Ok(40) => msg.maintenanceEndTimestamp = Some(r.read_int64(bytes)?),
                 Ok(48) => msg.retryAfter = Some(r.read_uint64(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2793,46 +3355,21 @@ impl<'a> MessageRead<'a> for ProtoOAErrorRes<'a> {
 
 impl<'a> MessageWrite for ProtoOAErrorRes<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .ctidTraderAccountId
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_len((&self.errorCode).len())
-            + self
-                .description
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self
-                .maintenanceEndTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .retryAfter
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.ctidTraderAccountId.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((&self.errorCode).len())
+        + self.description.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.maintenanceEndTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.retryAfter.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        self.ctidTraderAccountId
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(16, |w| w.write_uint64(*&m)))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        self.ctidTraderAccountId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(16, |w| w.write_int64(*&m)))?;
         w.write_with_tag(26, |w| w.write_string(&self.errorCode))?;
-        self.description
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(34, |w| w.write_string(&m)))?;
-        self.maintenanceEndTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
-        self.retryAfter
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_uint64(*&m)))?;
+        self.description.as_ref().map_or(Ok(()), |m| w.write_with_tag(34, |w| w.write_string(&m)))?;
+        self.maintenanceEndTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
+        self.retryAfter.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_uint64(*&m)))?;
         Ok(())
     }
 }
@@ -2851,9 +3388,7 @@ impl<'a> MessageRead<'a> for ProtoOAClientDisconnectEvent<'a> {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
                 Ok(18) => msg.reason = Some(r.read_string(bytes).map(Cow::Borrowed)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2863,22 +3398,13 @@ impl<'a> MessageRead<'a> for ProtoOAClientDisconnectEvent<'a> {
 
 impl<'a> MessageWrite for ProtoOAClientDisconnectEvent<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .reason
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.reason.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        self.reason
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(18, |w| w.write_string(&m)))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        self.reason.as_ref().map_or(Ok(()), |m| w.write_with_tag(18, |w| w.write_string(&m)))?;
         Ok(())
     }
 }
@@ -2887,7 +3413,7 @@ impl<'a> MessageWrite for ProtoOAClientDisconnectEvent<'a> {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAAccountsTokenInvalidatedEvent<'a> {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountIds: Vec<u64>,
+    pub ctidTraderAccountIds: Vec<i64>,
     pub reason: Option<Cow<'a, str>>,
 }
 
@@ -2897,11 +3423,9 @@ impl<'a> MessageRead<'a> for ProtoOAAccountsTokenInvalidatedEvent<'a> {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountIds.push(r.read_uint64(bytes)?),
+                Ok(16) => msg.ctidTraderAccountIds.push(r.read_int64(bytes)?),
                 Ok(26) => msg.reason = Some(r.read_string(bytes).map(Cow::Borrowed)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2911,30 +3435,15 @@ impl<'a> MessageRead<'a> for ProtoOAAccountsTokenInvalidatedEvent<'a> {
 
 impl<'a> MessageWrite for ProtoOAAccountsTokenInvalidatedEvent<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .ctidTraderAccountIds
-                .iter()
-                .map(|&s| 1 + sizeof_varint(*(&s) as u64))
-                .sum::<usize>()
-            + self
-                .reason
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.ctidTraderAccountIds.iter().map(|&s| 1 + sizeof_varint(*(&s) as u64)).sum::<usize>()
+        + self.reason.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        for s in &self.ctidTraderAccountIds {
-            w.write_with_tag(16, |w| w.write_uint64(*&*s))?;
-        }
-        self.reason
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(26, |w| w.write_string(&m)))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        for s in &self.ctidTraderAccountIds { w.write_with_tag(16, |w| w.write_int64(*&*s))?; }
+        self.reason.as_ref().map_or(Ok(()), |m| w.write_with_tag(26, |w| w.write_string(&m)))?;
         Ok(())
     }
 }
@@ -2951,9 +3460,7 @@ impl<'a> MessageRead<'a> for ProtoOAVersionReq {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -2963,15 +3470,11 @@ impl<'a> MessageRead<'a> for ProtoOAVersionReq {
 
 impl MessageWrite for ProtoOAVersionReq {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
         Ok(())
     }
 }
@@ -2990,9 +3493,7 @@ impl<'a> MessageRead<'a> for ProtoOAVersionRes<'a> {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
                 Ok(18) => msg.version = r.read_string(bytes).map(Cow::Borrowed)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3002,17 +3503,12 @@ impl<'a> MessageRead<'a> for ProtoOAVersionRes<'a> {
 
 impl<'a> MessageWrite for ProtoOAVersionRes<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_len((&self.version).len())
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((&self.version).len())
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
         w.write_with_tag(18, |w| w.write_string(&self.version))?;
         Ok(())
     }
@@ -3022,19 +3518,19 @@ impl<'a> MessageWrite for ProtoOAVersionRes<'a> {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOANewOrderReq<'a> {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub symbolId: i64,
     pub orderType: spotware::ProtoOAOrderType,
     pub tradeSide: spotware::ProtoOATradeSide,
     pub volume: i64,
-    pub limitPrice: Option<f32>,
-    pub stopPrice: Option<f32>,
+    pub limitPrice: Option<f64>,
+    pub stopPrice: Option<f64>,
     pub timeInForce: Option<spotware::ProtoOATimeInForce>,
     pub expirationTimestamp: Option<i64>,
-    pub stopLoss: Option<f32>,
-    pub takeProfit: Option<f32>,
+    pub stopLoss: Option<f64>,
+    pub takeProfit: Option<f64>,
     pub comment: Option<Cow<'a, str>>,
-    pub baseSlippagePrice: Option<f32>,
+    pub baseSlippagePrice: Option<f64>,
     pub slippageInPoints: Option<i32>,
     pub label: Option<Cow<'a, str>>,
     pub positionId: Option<i64>,
@@ -3052,19 +3548,19 @@ impl<'a> MessageRead<'a> for ProtoOANewOrderReq<'a> {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(24) => msg.symbolId = r.read_int64(bytes)?,
                 Ok(32) => msg.orderType = r.read_enum(bytes)?,
                 Ok(40) => msg.tradeSide = r.read_enum(bytes)?,
                 Ok(48) => msg.volume = r.read_int64(bytes)?,
-                Ok(61) => msg.limitPrice = Some(r.read_float(bytes)?),
-                Ok(69) => msg.stopPrice = Some(r.read_float(bytes)?),
+                Ok(57) => msg.limitPrice = Some(r.read_double(bytes)?),
+                Ok(65) => msg.stopPrice = Some(r.read_double(bytes)?),
                 Ok(72) => msg.timeInForce = Some(r.read_enum(bytes)?),
                 Ok(80) => msg.expirationTimestamp = Some(r.read_int64(bytes)?),
-                Ok(93) => msg.stopLoss = Some(r.read_float(bytes)?),
-                Ok(101) => msg.takeProfit = Some(r.read_float(bytes)?),
+                Ok(89) => msg.stopLoss = Some(r.read_double(bytes)?),
+                Ok(97) => msg.takeProfit = Some(r.read_double(bytes)?),
                 Ok(106) => msg.comment = Some(r.read_string(bytes).map(Cow::Borrowed)?),
-                Ok(117) => msg.baseSlippagePrice = Some(r.read_float(bytes)?),
+                Ok(113) => msg.baseSlippagePrice = Some(r.read_double(bytes)?),
                 Ok(120) => msg.slippageInPoints = Some(r.read_int32(bytes)?),
                 Ok(130) => msg.label = Some(r.read_string(bytes).map(Cow::Borrowed)?),
                 Ok(136) => msg.positionId = Some(r.read_int64(bytes)?),
@@ -3074,9 +3570,7 @@ impl<'a> MessageRead<'a> for ProtoOANewOrderReq<'a> {
                 Ok(168) => msg.guaranteedStopLoss = Some(r.read_bool(bytes)?),
                 Ok(176) => msg.trailingStopLoss = Some(r.read_bool(bytes)?),
                 Ok(184) => msg.stopTriggerMethod = Some(r.read_enum(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3086,134 +3580,55 @@ impl<'a> MessageRead<'a> for ProtoOANewOrderReq<'a> {
 
 impl<'a> MessageWrite for ProtoOANewOrderReq<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_varint(*(&self.symbolId) as u64)
-            + 1
-            + sizeof_varint(*(&self.orderType) as u64)
-            + 1
-            + sizeof_varint(*(&self.tradeSide) as u64)
-            + 1
-            + sizeof_varint(*(&self.volume) as u64)
-            + self.limitPrice.as_ref().map_or(0, |&m| 1 + 4)
-            + self.stopPrice.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .timeInForce
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .expirationTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self.stopLoss.as_ref().map_or(0, |&m| 1 + 4)
-            + self.takeProfit.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .comment
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self.baseSlippagePrice.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .slippageInPoints
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .label
-                .as_ref()
-                .map_or(0, |m| 2 + sizeof_len((&m).len()))
-            + self
-                .positionId
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .clientOrderId
-                .as_ref()
-                .map_or(0, |m| 2 + sizeof_len((&m).len()))
-            + self
-                .relativeStopLoss
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .relativeTakeProfit
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .guaranteedStopLoss
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .trailingStopLoss
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
-            + self
-                .stopTriggerMethod
-                .as_ref()
-                .map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.symbolId) as u64)
+        + 1 + sizeof_varint(*(&self.orderType) as u64)
+        + 1 + sizeof_varint(*(&self.tradeSide) as u64)
+        + 1 + sizeof_varint(*(&self.volume) as u64)
+        + self.limitPrice.as_ref().map_or(0, |&m| 1 + 8)
+        + self.stopPrice.as_ref().map_or(0, |&m| 1 + 8)
+        + self.timeInForce.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.expirationTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.stopLoss.as_ref().map_or(0, |&m| 1 + 8)
+        + self.takeProfit.as_ref().map_or(0, |&m| 1 + 8)
+        + self.comment.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.baseSlippagePrice.as_ref().map_or(0, |&m| 1 + 8)
+        + self.slippageInPoints.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.label.as_ref().map_or(0, |m| 2 + sizeof_len((&m).len()))
+        + self.positionId.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.clientOrderId.as_ref().map_or(0, |m| 2 + sizeof_len((&m).len()))
+        + self.relativeStopLoss.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.relativeTakeProfit.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.guaranteedStopLoss.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.trailingStopLoss.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
+        + self.stopTriggerMethod.as_ref().map_or(0, |&m| 2 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(24, |w| w.write_int64(*&self.symbolId))?;
         w.write_with_tag(32, |w| w.write_enum(*&self.orderType as i32))?;
         w.write_with_tag(40, |w| w.write_enum(*&self.tradeSide as i32))?;
         w.write_with_tag(48, |w| w.write_int64(*&self.volume))?;
-        self.limitPrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(61, |w| w.write_float(*&m)))?;
-        self.stopPrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(69, |w| w.write_float(*&m)))?;
-        self.timeInForce.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(72, |w| w.write_enum(*&m as i32))
-        })?;
-        self.expirationTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_int64(*&m)))?;
-        self.stopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(93, |w| w.write_float(*&m)))?;
-        self.takeProfit
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(101, |w| w.write_float(*&m)))?;
-        self.comment
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(106, |w| w.write_string(&m)))?;
-        self.baseSlippagePrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(117, |w| w.write_float(*&m)))?;
-        self.slippageInPoints
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(120, |w| w.write_int32(*&m)))?;
-        self.label
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(130, |w| w.write_string(&m)))?;
-        self.positionId
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(136, |w| w.write_int64(*&m)))?;
-        self.clientOrderId
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(146, |w| w.write_string(&m)))?;
-        self.relativeStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(152, |w| w.write_int64(*&m)))?;
-        self.relativeTakeProfit
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(160, |w| w.write_int64(*&m)))?;
-        self.guaranteedStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(168, |w| w.write_bool(*&m)))?;
-        self.trailingStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(176, |w| w.write_bool(*&m)))?;
-        self.stopTriggerMethod.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(184, |w| w.write_enum(*&m as i32))
-        })?;
+        self.limitPrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(57, |w| w.write_double(*&m)))?;
+        self.stopPrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(65, |w| w.write_double(*&m)))?;
+        self.timeInForce.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_enum(*&m as i32)))?;
+        self.expirationTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_int64(*&m)))?;
+        self.stopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(89, |w| w.write_double(*&m)))?;
+        self.takeProfit.as_ref().map_or(Ok(()), |&m| w.write_with_tag(97, |w| w.write_double(*&m)))?;
+        self.comment.as_ref().map_or(Ok(()), |m| w.write_with_tag(106, |w| w.write_string(&m)))?;
+        self.baseSlippagePrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(113, |w| w.write_double(*&m)))?;
+        self.slippageInPoints.as_ref().map_or(Ok(()), |&m| w.write_with_tag(120, |w| w.write_int32(*&m)))?;
+        self.label.as_ref().map_or(Ok(()), |m| w.write_with_tag(130, |w| w.write_string(&m)))?;
+        self.positionId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(136, |w| w.write_int64(*&m)))?;
+        self.clientOrderId.as_ref().map_or(Ok(()), |m| w.write_with_tag(146, |w| w.write_string(&m)))?;
+        self.relativeStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(152, |w| w.write_int64(*&m)))?;
+        self.relativeTakeProfit.as_ref().map_or(Ok(()), |&m| w.write_with_tag(160, |w| w.write_int64(*&m)))?;
+        self.guaranteedStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(168, |w| w.write_bool(*&m)))?;
+        self.trailingStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(176, |w| w.write_bool(*&m)))?;
+        self.stopTriggerMethod.as_ref().map_or(Ok(()), |&m| w.write_with_tag(184, |w| w.write_enum(*&m as i32)))?;
         Ok(())
     }
 }
@@ -3222,7 +3637,7 @@ impl<'a> MessageWrite for ProtoOANewOrderReq<'a> {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAExecutionEvent<'a> {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub executionType: spotware::ProtoOAExecutionType,
     pub position: Option<spotware::ProtoOAPosition<'a>>,
     pub order: Option<spotware::ProtoOAOrder<'a>>,
@@ -3239,24 +3654,16 @@ impl<'a> MessageRead<'a> for ProtoOAExecutionEvent<'a> {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(24) => msg.executionType = r.read_enum(bytes)?,
                 Ok(34) => msg.position = Some(r.read_message::<spotware::ProtoOAPosition>(bytes)?),
                 Ok(42) => msg.order = Some(r.read_message::<spotware::ProtoOAOrder>(bytes)?),
                 Ok(50) => msg.deal = Some(r.read_message::<spotware::ProtoOADeal>(bytes)?),
-                Ok(58) => {
-                    msg.bonusDepositWithdraw =
-                        Some(r.read_message::<spotware::ProtoOABonusDepositWithdraw>(bytes)?)
-                }
-                Ok(66) => {
-                    msg.depositWithdraw =
-                        Some(r.read_message::<spotware::ProtoOADepositWithdraw>(bytes)?)
-                }
+                Ok(58) => msg.bonusDepositWithdraw = Some(r.read_message::<spotware::ProtoOABonusDepositWithdraw>(bytes)?),
+                Ok(66) => msg.depositWithdraw = Some(r.read_message::<spotware::ProtoOADepositWithdraw>(bytes)?),
                 Ok(74) => msg.errorCode = Some(r.read_string(bytes).map(Cow::Borrowed)?),
                 Ok(80) => msg.isServerEvent = Some(r.read_bool(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3266,70 +3673,29 @@ impl<'a> MessageRead<'a> for ProtoOAExecutionEvent<'a> {
 
 impl<'a> MessageWrite for ProtoOAExecutionEvent<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_varint(*(&self.executionType) as u64)
-            + self
-                .position
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((m).get_size()))
-            + self
-                .order
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((m).get_size()))
-            + self
-                .deal
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((m).get_size()))
-            + self
-                .bonusDepositWithdraw
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((m).get_size()))
-            + self
-                .depositWithdraw
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((m).get_size()))
-            + self
-                .errorCode
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
-            + self
-                .isServerEvent
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.executionType) as u64)
+        + self.position.as_ref().map_or(0, |m| 1 + sizeof_len((m).get_size()))
+        + self.order.as_ref().map_or(0, |m| 1 + sizeof_len((m).get_size()))
+        + self.deal.as_ref().map_or(0, |m| 1 + sizeof_len((m).get_size()))
+        + self.bonusDepositWithdraw.as_ref().map_or(0, |m| 1 + sizeof_len((m).get_size()))
+        + self.depositWithdraw.as_ref().map_or(0, |m| 1 + sizeof_len((m).get_size()))
+        + self.errorCode.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + self.isServerEvent.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(24, |w| w.write_enum(*&self.executionType as i32))?;
-        self.position
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(34, |w| w.write_message(m)))?;
-        self.order
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(42, |w| w.write_message(m)))?;
-        self.deal
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(50, |w| w.write_message(m)))?;
-        self.bonusDepositWithdraw
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(58, |w| w.write_message(m)))?;
-        self.depositWithdraw
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(66, |w| w.write_message(m)))?;
-        self.errorCode
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(74, |w| w.write_string(&m)))?;
-        self.isServerEvent
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_bool(*&m)))?;
+        self.position.as_ref().map_or(Ok(()), |m| w.write_with_tag(34, |w| w.write_message(m)))?;
+        self.order.as_ref().map_or(Ok(()), |m| w.write_with_tag(42, |w| w.write_message(m)))?;
+        self.deal.as_ref().map_or(Ok(()), |m| w.write_with_tag(50, |w| w.write_message(m)))?;
+        self.bonusDepositWithdraw.as_ref().map_or(Ok(()), |m| w.write_with_tag(58, |w| w.write_message(m)))?;
+        self.depositWithdraw.as_ref().map_or(Ok(()), |m| w.write_with_tag(66, |w| w.write_message(m)))?;
+        self.errorCode.as_ref().map_or(Ok(()), |m| w.write_with_tag(74, |w| w.write_string(&m)))?;
+        self.isServerEvent.as_ref().map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_bool(*&m)))?;
         Ok(())
     }
 }
@@ -3338,7 +3704,7 @@ impl<'a> MessageWrite for ProtoOAExecutionEvent<'a> {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOACancelOrderReq {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub orderId: i64,
 }
 
@@ -3348,11 +3714,9 @@ impl<'a> MessageRead<'a> for ProtoOACancelOrderReq {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(24) => msg.orderId = r.read_int64(bytes)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3362,20 +3726,14 @@ impl<'a> MessageRead<'a> for ProtoOACancelOrderReq {
 
 impl MessageWrite for ProtoOACancelOrderReq {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_varint(*(&self.orderId) as u64)
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.orderId) as u64)
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(24, |w| w.write_int64(*&self.orderId))?;
         Ok(())
     }
@@ -3385,14 +3743,14 @@ impl MessageWrite for ProtoOACancelOrderReq {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAAmendOrderReq {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub orderId: i64,
     pub volume: Option<i64>,
-    pub limitPrice: Option<f32>,
-    pub stopPrice: Option<f32>,
+    pub limitPrice: Option<f64>,
+    pub stopPrice: Option<f64>,
     pub expirationTimestamp: Option<i64>,
-    pub stopLoss: Option<f32>,
-    pub takeProfit: Option<f32>,
+    pub stopLoss: Option<f64>,
+    pub takeProfit: Option<f64>,
     pub slippageInPoints: Option<i32>,
     pub relativeStopLoss: Option<i64>,
     pub relativeTakeProfit: Option<i64>,
@@ -3407,23 +3765,21 @@ impl<'a> MessageRead<'a> for ProtoOAAmendOrderReq {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(24) => msg.orderId = r.read_int64(bytes)?,
                 Ok(32) => msg.volume = Some(r.read_int64(bytes)?),
-                Ok(45) => msg.limitPrice = Some(r.read_float(bytes)?),
-                Ok(53) => msg.stopPrice = Some(r.read_float(bytes)?),
+                Ok(41) => msg.limitPrice = Some(r.read_double(bytes)?),
+                Ok(49) => msg.stopPrice = Some(r.read_double(bytes)?),
                 Ok(56) => msg.expirationTimestamp = Some(r.read_int64(bytes)?),
-                Ok(69) => msg.stopLoss = Some(r.read_float(bytes)?),
-                Ok(77) => msg.takeProfit = Some(r.read_float(bytes)?),
+                Ok(65) => msg.stopLoss = Some(r.read_double(bytes)?),
+                Ok(73) => msg.takeProfit = Some(r.read_double(bytes)?),
                 Ok(80) => msg.slippageInPoints = Some(r.read_int32(bytes)?),
                 Ok(88) => msg.relativeStopLoss = Some(r.read_int64(bytes)?),
                 Ok(96) => msg.relativeTakeProfit = Some(r.read_int64(bytes)?),
                 Ok(104) => msg.guaranteedStopLoss = Some(r.read_bool(bytes)?),
                 Ok(112) => msg.trailingStopLoss = Some(r.read_bool(bytes)?),
                 Ok(120) => msg.stopTriggerMethod = Some(r.read_enum(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3433,93 +3789,39 @@ impl<'a> MessageRead<'a> for ProtoOAAmendOrderReq {
 
 impl MessageWrite for ProtoOAAmendOrderReq {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_varint(*(&self.orderId) as u64)
-            + self
-                .volume
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self.limitPrice.as_ref().map_or(0, |&m| 1 + 4)
-            + self.stopPrice.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .expirationTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self.stopLoss.as_ref().map_or(0, |&m| 1 + 4)
-            + self.takeProfit.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .slippageInPoints
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .relativeStopLoss
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .relativeTakeProfit
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .guaranteedStopLoss
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .trailingStopLoss
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .stopTriggerMethod
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.orderId) as u64)
+        + self.volume.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.limitPrice.as_ref().map_or(0, |&m| 1 + 8)
+        + self.stopPrice.as_ref().map_or(0, |&m| 1 + 8)
+        + self.expirationTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.stopLoss.as_ref().map_or(0, |&m| 1 + 8)
+        + self.takeProfit.as_ref().map_or(0, |&m| 1 + 8)
+        + self.slippageInPoints.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.relativeStopLoss.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.relativeTakeProfit.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.guaranteedStopLoss.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.trailingStopLoss.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.stopTriggerMethod.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(24, |w| w.write_int64(*&self.orderId))?;
-        self.volume
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
-        self.limitPrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(45, |w| w.write_float(*&m)))?;
-        self.stopPrice
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(53, |w| w.write_float(*&m)))?;
-        self.expirationTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_int64(*&m)))?;
-        self.stopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(69, |w| w.write_float(*&m)))?;
-        self.takeProfit
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(77, |w| w.write_float(*&m)))?;
-        self.slippageInPoints
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_int32(*&m)))?;
-        self.relativeStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(88, |w| w.write_int64(*&m)))?;
-        self.relativeTakeProfit
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(96, |w| w.write_int64(*&m)))?;
-        self.guaranteedStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(104, |w| w.write_bool(*&m)))?;
-        self.trailingStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(112, |w| w.write_bool(*&m)))?;
-        self.stopTriggerMethod.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(120, |w| w.write_enum(*&m as i32))
-        })?;
+        self.volume.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
+        self.limitPrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(41, |w| w.write_double(*&m)))?;
+        self.stopPrice.as_ref().map_or(Ok(()), |&m| w.write_with_tag(49, |w| w.write_double(*&m)))?;
+        self.expirationTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_int64(*&m)))?;
+        self.stopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(65, |w| w.write_double(*&m)))?;
+        self.takeProfit.as_ref().map_or(Ok(()), |&m| w.write_with_tag(73, |w| w.write_double(*&m)))?;
+        self.slippageInPoints.as_ref().map_or(Ok(()), |&m| w.write_with_tag(80, |w| w.write_int32(*&m)))?;
+        self.relativeStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(88, |w| w.write_int64(*&m)))?;
+        self.relativeTakeProfit.as_ref().map_or(Ok(()), |&m| w.write_with_tag(96, |w| w.write_int64(*&m)))?;
+        self.guaranteedStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(104, |w| w.write_bool(*&m)))?;
+        self.trailingStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(112, |w| w.write_bool(*&m)))?;
+        self.stopTriggerMethod.as_ref().map_or(Ok(()), |&m| w.write_with_tag(120, |w| w.write_enum(*&m as i32)))?;
         Ok(())
     }
 }
@@ -3528,10 +3830,10 @@ impl MessageWrite for ProtoOAAmendOrderReq {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAAmendPositionSLTPReq {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub positionId: i64,
-    pub stopLoss: Option<f32>,
-    pub takeProfit: Option<f32>,
+    pub stopLoss: Option<f64>,
+    pub takeProfit: Option<f64>,
     pub guaranteedStopLoss: Option<bool>,
     pub trailingStopLoss: Option<bool>,
     pub stopLossTriggerMethod: Option<spotware::ProtoOAOrderTriggerMethod>,
@@ -3543,16 +3845,14 @@ impl<'a> MessageRead<'a> for ProtoOAAmendPositionSLTPReq {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(24) => msg.positionId = r.read_int64(bytes)?,
-                Ok(37) => msg.stopLoss = Some(r.read_float(bytes)?),
-                Ok(45) => msg.takeProfit = Some(r.read_float(bytes)?),
+                Ok(33) => msg.stopLoss = Some(r.read_double(bytes)?),
+                Ok(41) => msg.takeProfit = Some(r.read_double(bytes)?),
                 Ok(56) => msg.guaranteedStopLoss = Some(r.read_bool(bytes)?),
                 Ok(64) => msg.trailingStopLoss = Some(r.read_bool(bytes)?),
                 Ok(72) => msg.stopLossTriggerMethod = Some(r.read_enum(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3562,50 +3862,25 @@ impl<'a> MessageRead<'a> for ProtoOAAmendPositionSLTPReq {
 
 impl MessageWrite for ProtoOAAmendPositionSLTPReq {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_varint(*(&self.positionId) as u64)
-            + self.stopLoss.as_ref().map_or(0, |&m| 1 + 4)
-            + self.takeProfit.as_ref().map_or(0, |&m| 1 + 4)
-            + self
-                .guaranteedStopLoss
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .trailingStopLoss
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .stopLossTriggerMethod
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.positionId) as u64)
+        + self.stopLoss.as_ref().map_or(0, |&m| 1 + 8)
+        + self.takeProfit.as_ref().map_or(0, |&m| 1 + 8)
+        + self.guaranteedStopLoss.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.trailingStopLoss.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.stopLossTriggerMethod.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(24, |w| w.write_int64(*&self.positionId))?;
-        self.stopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(37, |w| w.write_float(*&m)))?;
-        self.takeProfit
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(45, |w| w.write_float(*&m)))?;
-        self.guaranteedStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_bool(*&m)))?;
-        self.trailingStopLoss
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_bool(*&m)))?;
-        self.stopLossTriggerMethod.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(72, |w| w.write_enum(*&m as i32))
-        })?;
+        self.stopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(33, |w| w.write_double(*&m)))?;
+        self.takeProfit.as_ref().map_or(Ok(()), |&m| w.write_with_tag(41, |w| w.write_double(*&m)))?;
+        self.guaranteedStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_bool(*&m)))?;
+        self.trailingStopLoss.as_ref().map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_bool(*&m)))?;
+        self.stopLossTriggerMethod.as_ref().map_or(Ok(()), |&m| w.write_with_tag(72, |w| w.write_enum(*&m as i32)))?;
         Ok(())
     }
 }
@@ -3614,7 +3889,7 @@ impl MessageWrite for ProtoOAAmendPositionSLTPReq {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAClosePositionReq {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub positionId: i64,
     pub volume: i64,
 }
@@ -3625,12 +3900,10 @@ impl<'a> MessageRead<'a> for ProtoOAClosePositionReq {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(24) => msg.positionId = r.read_int64(bytes)?,
                 Ok(32) => msg.volume = r.read_int64(bytes)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3640,22 +3913,15 @@ impl<'a> MessageRead<'a> for ProtoOAClosePositionReq {
 
 impl MessageWrite for ProtoOAClosePositionReq {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_varint(*(&self.positionId) as u64)
-            + 1
-            + sizeof_varint(*(&self.volume) as u64)
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.positionId) as u64)
+        + 1 + sizeof_varint(*(&self.volume) as u64)
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(24, |w| w.write_int64(*&self.positionId))?;
         w.write_with_tag(32, |w| w.write_int64(*&self.volume))?;
         Ok(())
@@ -3664,9 +3930,493 @@ impl MessageWrite for ProtoOAClosePositionReq {
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOATrailingSLChangedEvent {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub positionId: i64,
+    pub orderId: i64,
+    pub stopPrice: f64,
+    pub utcLastUpdateTimestamp: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOATrailingSLChangedEvent {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.positionId = r.read_int64(bytes)?,
+                Ok(32) => msg.orderId = r.read_int64(bytes)?,
+                Ok(41) => msg.stopPrice = r.read_double(bytes)?,
+                Ok(48) => msg.utcLastUpdateTimestamp = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOATrailingSLChangedEvent {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.positionId) as u64)
+        + 1 + sizeof_varint(*(&self.orderId) as u64)
+        + 1 + 8
+        + 1 + sizeof_varint(*(&self.utcLastUpdateTimestamp) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.positionId))?;
+        w.write_with_tag(32, |w| w.write_int64(*&self.orderId))?;
+        w.write_with_tag(41, |w| w.write_double(*&self.stopPrice))?;
+        w.write_with_tag(48, |w| w.write_int64(*&self.utcLastUpdateTimestamp))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAAssetListReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAAssetListReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAAssetListReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAAssetListRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub asset: Vec<spotware::ProtoOAAsset<'a>>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAAssetListRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.asset.push(r.read_message::<spotware::ProtoOAAsset>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAAssetListRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.asset.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.asset { w.write_with_tag(26, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolsListReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub includeArchivedSymbols: Option<bool>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolsListReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.includeArchivedSymbols = Some(r.read_bool(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOASymbolsListReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.includeArchivedSymbols.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        self.includeArchivedSymbols.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_bool(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolsListRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbol: Vec<spotware::ProtoOALightSymbol<'a>>,
+    pub archivedSymbol: Vec<spotware::ProtoOAArchivedSymbol<'a>>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolsListRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.symbol.push(r.read_message::<spotware::ProtoOALightSymbol>(bytes)?),
+                Ok(34) => msg.archivedSymbol.push(r.read_message::<spotware::ProtoOAArchivedSymbol>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOASymbolsListRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbol.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + self.archivedSymbol.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbol { w.write_with_tag(26, |w| w.write_message(s))?; }
+        for s in &self.archivedSymbol { w.write_with_tag(34, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolByIdReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbolId: Vec<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolByIdReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.symbolId.push(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOASymbolByIdReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbolId.iter().map(|&s| 1 + sizeof_varint(*(&s) as u64)).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbolId { w.write_with_tag(24, |w| w.write_int64(*&*s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolByIdRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbol: Vec<spotware::ProtoOASymbol<'a>>,
+    pub archivedSymbol: Vec<spotware::ProtoOAArchivedSymbol<'a>>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolByIdRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.symbol.push(r.read_message::<spotware::ProtoOASymbol>(bytes)?),
+                Ok(34) => msg.archivedSymbol.push(r.read_message::<spotware::ProtoOAArchivedSymbol>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOASymbolByIdRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbol.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + self.archivedSymbol.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbol { w.write_with_tag(26, |w| w.write_message(s))?; }
+        for s in &self.archivedSymbol { w.write_with_tag(34, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolsForConversionReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub firstAssetId: i64,
+    pub lastAssetId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolsForConversionReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.firstAssetId = r.read_int64(bytes)?,
+                Ok(32) => msg.lastAssetId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOASymbolsForConversionReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.firstAssetId) as u64)
+        + 1 + sizeof_varint(*(&self.lastAssetId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.firstAssetId))?;
+        w.write_with_tag(32, |w| w.write_int64(*&self.lastAssetId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolsForConversionRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbol: Vec<spotware::ProtoOALightSymbol<'a>>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolsForConversionRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.symbol.push(r.read_message::<spotware::ProtoOALightSymbol>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOASymbolsForConversionRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbol.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbol { w.write_with_tag(26, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolChangedEvent {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbolId: Vec<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolChangedEvent {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.symbolId.push(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOASymbolChangedEvent {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbolId.iter().map(|&s| 1 + sizeof_varint(*(&s) as u64)).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbolId { w.write_with_tag(24, |w| w.write_int64(*&*s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAAssetClassListReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAAssetClassListReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAAssetClassListReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAAssetClassListRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub assetClass: Vec<spotware::ProtoOAAssetClass<'a>>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAAssetClassListRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.assetClass.push(r.read_message::<spotware::ProtoOAAssetClass>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAAssetClassListRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.assetClass.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.assetClass { w.write_with_tag(26, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOATraderReq {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
 }
 
 impl<'a> MessageRead<'a> for ProtoOATraderReq {
@@ -3675,10 +4425,8 @@ impl<'a> MessageRead<'a> for ProtoOATraderReq {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3688,18 +4436,13 @@ impl<'a> MessageRead<'a> for ProtoOATraderReq {
 
 impl MessageWrite for ProtoOATraderReq {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         Ok(())
     }
 }
@@ -3708,7 +4451,7 @@ impl MessageWrite for ProtoOATraderReq {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOATraderRes<'a> {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub trader: spotware::ProtoOATrader<'a>,
 }
 
@@ -3718,11 +4461,9 @@ impl<'a> MessageRead<'a> for ProtoOATraderRes<'a> {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(26) => msg.trader = r.read_message::<spotware::ProtoOATrader>(bytes)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3732,20 +4473,14 @@ impl<'a> MessageRead<'a> for ProtoOATraderRes<'a> {
 
 impl<'a> MessageWrite for ProtoOATraderRes<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_len((self.trader).get_size())
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_len((self.trader).get_size())
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(26, |w| w.write_message(&self.trader))?;
         Ok(())
     }
@@ -3755,7 +4490,7 @@ impl<'a> MessageWrite for ProtoOATraderRes<'a> {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOATraderUpdatedEvent<'a> {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub trader: spotware::ProtoOATrader<'a>,
 }
 
@@ -3765,11 +4500,9 @@ impl<'a> MessageRead<'a> for ProtoOATraderUpdatedEvent<'a> {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(26) => msg.trader = r.read_message::<spotware::ProtoOATrader>(bytes)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3779,20 +4512,14 @@ impl<'a> MessageRead<'a> for ProtoOATraderUpdatedEvent<'a> {
 
 impl<'a> MessageWrite for ProtoOATraderUpdatedEvent<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_len((self.trader).get_size())
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_len((self.trader).get_size())
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(26, |w| w.write_message(&self.trader))?;
         Ok(())
     }
@@ -3802,7 +4529,7 @@ impl<'a> MessageWrite for ProtoOATraderUpdatedEvent<'a> {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAReconcileReq {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub returnProtectionOrders: Option<bool>,
 }
 
@@ -3812,11 +4539,9 @@ impl<'a> MessageRead<'a> for ProtoOAReconcileReq {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(24) => msg.returnProtectionOrders = Some(r.read_bool(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3826,25 +4551,15 @@ impl<'a> MessageRead<'a> for ProtoOAReconcileReq {
 
 impl MessageWrite for ProtoOAReconcileReq {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + self
-                .returnProtectionOrders
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.returnProtectionOrders.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
-        self.returnProtectionOrders
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_bool(*&m)))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        self.returnProtectionOrders.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_bool(*&m)))?;
         Ok(())
     }
 }
@@ -3853,7 +4568,7 @@ impl MessageWrite for ProtoOAReconcileReq {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAReconcileRes<'a> {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub position: Vec<spotware::ProtoOAPosition<'a>>,
     pub order: Vec<spotware::ProtoOAOrder<'a>>,
 }
@@ -3864,16 +4579,10 @@ impl<'a> MessageRead<'a> for ProtoOAReconcileRes<'a> {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
-                Ok(26) => msg
-                    .position
-                    .push(r.read_message::<spotware::ProtoOAPosition>(bytes)?),
-                Ok(34) => msg
-                    .order
-                    .push(r.read_message::<spotware::ProtoOAOrder>(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.position.push(r.read_message::<spotware::ProtoOAPosition>(bytes)?),
+                Ok(34) => msg.order.push(r.read_message::<spotware::ProtoOAOrder>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3883,34 +4592,17 @@ impl<'a> MessageRead<'a> for ProtoOAReconcileRes<'a> {
 
 impl<'a> MessageWrite for ProtoOAReconcileRes<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + self
-                .position
-                .iter()
-                .map(|s| 1 + sizeof_len((s).get_size()))
-                .sum::<usize>()
-            + self
-                .order
-                .iter()
-                .map(|s| 1 + sizeof_len((s).get_size()))
-                .sum::<usize>()
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.position.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + self.order.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
-        for s in &self.position {
-            w.write_with_tag(26, |w| w.write_message(s))?;
-        }
-        for s in &self.order {
-            w.write_with_tag(34, |w| w.write_message(s))?;
-        }
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.position { w.write_with_tag(26, |w| w.write_message(s))?; }
+        for s in &self.order { w.write_with_tag(34, |w| w.write_message(s))?; }
         Ok(())
     }
 }
@@ -3919,7 +4611,7 @@ impl<'a> MessageWrite for ProtoOAReconcileRes<'a> {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAOrderErrorEvent<'a> {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub errorCode: Cow<'a, str>,
     pub orderId: Option<i64>,
     pub positionId: Option<i64>,
@@ -3932,14 +4624,12 @@ impl<'a> MessageRead<'a> for ProtoOAOrderErrorEvent<'a> {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(40) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(40) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(18) => msg.errorCode = r.read_string(bytes).map(Cow::Borrowed)?,
                 Ok(24) => msg.orderId = Some(r.read_int64(bytes)?),
                 Ok(48) => msg.positionId = Some(r.read_int64(bytes)?),
                 Ok(58) => msg.description = Some(r.read_string(bytes).map(Cow::Borrowed)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -3949,42 +4639,412 @@ impl<'a> MessageRead<'a> for ProtoOAOrderErrorEvent<'a> {
 
 impl<'a> MessageWrite for ProtoOAOrderErrorEvent<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_len((&self.errorCode).len())
-            + self
-                .orderId
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .positionId
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .description
-                .as_ref()
-                .map_or(0, |m| 1 + sizeof_len((&m).len()))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_len((&self.errorCode).len())
+        + self.orderId.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.positionId.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.description.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(40, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(40, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(18, |w| w.write_string(&self.errorCode))?;
-        self.orderId
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
-        self.positionId
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_int64(*&m)))?;
-        self.description
-            .as_ref()
-            .map_or(Ok(()), |m| w.write_with_tag(58, |w| w.write_string(&m)))?;
+        self.orderId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
+        self.positionId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_int64(*&m)))?;
+        self.description.as_ref().map_or(Ok(()), |m| w.write_with_tag(58, |w| w.write_string(&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADealListReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub fromTimestamp: Option<i64>,
+    pub toTimestamp: Option<i64>,
+    pub maxRows: Option<i32>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADealListReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.fromTimestamp = Some(r.read_int64(bytes)?),
+                Ok(32) => msg.toTimestamp = Some(r.read_int64(bytes)?),
+                Ok(40) => msg.maxRows = Some(r.read_int32(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADealListReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.fromTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.toTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.maxRows.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        self.fromTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
+        self.toTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
+        self.maxRows.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int32(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADealListRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub deal: Vec<spotware::ProtoOADeal>,
+    pub hasMore: bool,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADealListRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.deal.push(r.read_message::<spotware::ProtoOADeal>(bytes)?),
+                Ok(32) => msg.hasMore = r.read_bool(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADealListRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.deal.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + 1 + sizeof_varint(*(&self.hasMore) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.deal { w.write_with_tag(26, |w| w.write_message(s))?; }
+        w.write_with_tag(32, |w| w.write_bool(*&self.hasMore))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAOrderListReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub fromTimestamp: Option<i64>,
+    pub toTimestamp: Option<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAOrderListReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.fromTimestamp = Some(r.read_int64(bytes)?),
+                Ok(32) => msg.toTimestamp = Some(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAOrderListReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.fromTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.toTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        self.fromTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
+        self.toTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAOrderListRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub order: Vec<spotware::ProtoOAOrder<'a>>,
+    pub hasMore: bool,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAOrderListRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.order.push(r.read_message::<spotware::ProtoOAOrder>(bytes)?),
+                Ok(32) => msg.hasMore = r.read_bool(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAOrderListRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.order.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + 1 + sizeof_varint(*(&self.hasMore) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.order { w.write_with_tag(26, |w| w.write_message(s))?; }
+        w.write_with_tag(32, |w| w.write_bool(*&self.hasMore))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAExpectedMarginReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbolId: i64,
+    pub volume: Vec<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAExpectedMarginReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.symbolId = r.read_int64(bytes)?,
+                Ok(32) => msg.volume.push(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAExpectedMarginReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.symbolId) as u64)
+        + self.volume.iter().map(|&s| 1 + sizeof_varint(*(&s) as u64)).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.symbolId))?;
+        for s in &self.volume { w.write_with_tag(32, |w| w.write_int64(*&*s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAExpectedMarginRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub margin: Vec<spotware::ProtoOAExpectedMargin>,
+    pub moneyDigits: Option<u32>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAExpectedMarginRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.margin.push(r.read_message::<spotware::ProtoOAExpectedMargin>(bytes)?),
+                Ok(32) => msg.moneyDigits = Some(r.read_uint32(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAExpectedMarginRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.margin.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + self.moneyDigits.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.margin { w.write_with_tag(26, |w| w.write_message(s))?; }
+        self.moneyDigits.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_uint32(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAMarginChangedEvent {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub positionId: u64,
+    pub usedMargin: u64,
+    pub moneyDigits: Option<u32>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAMarginChangedEvent {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.positionId = r.read_uint64(bytes)?,
+                Ok(32) => msg.usedMargin = r.read_uint64(bytes)?,
+                Ok(40) => msg.moneyDigits = Some(r.read_uint32(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAMarginChangedEvent {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.positionId) as u64)
+        + 1 + sizeof_varint(*(&self.usedMargin) as u64)
+        + self.moneyDigits.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_uint64(*&self.positionId))?;
+        w.write_with_tag(32, |w| w.write_uint64(*&self.usedMargin))?;
+        self.moneyDigits.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_uint32(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOACashFlowHistoryListReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub fromTimestamp: i64,
+    pub toTimestamp: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOACashFlowHistoryListReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.fromTimestamp = r.read_int64(bytes)?,
+                Ok(32) => msg.toTimestamp = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOACashFlowHistoryListReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.fromTimestamp) as u64)
+        + 1 + sizeof_varint(*(&self.toTimestamp) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.fromTimestamp))?;
+        w.write_with_tag(32, |w| w.write_int64(*&self.toTimestamp))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOACashFlowHistoryListRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub depositWithdraw: Vec<spotware::ProtoOADepositWithdraw<'a>>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOACashFlowHistoryListRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.depositWithdraw.push(r.read_message::<spotware::ProtoOADepositWithdraw>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOACashFlowHistoryListRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.depositWithdraw.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.depositWithdraw { w.write_with_tag(26, |w| w.write_message(s))?; }
         Ok(())
     }
 }
@@ -4003,9 +5063,7 @@ impl<'a> MessageRead<'a> for ProtoOAGetAccountListByAccessTokenReq<'a> {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
                 Ok(18) => msg.accessToken = r.read_string(bytes).map(Cow::Borrowed)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -4015,17 +5073,12 @@ impl<'a> MessageRead<'a> for ProtoOAGetAccountListByAccessTokenReq<'a> {
 
 impl<'a> MessageWrite for ProtoOAGetAccountListByAccessTokenReq<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_len((&self.accessToken).len())
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((&self.accessToken).len())
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
         w.write_with_tag(18, |w| w.write_string(&self.accessToken))?;
         Ok(())
     }
@@ -4048,12 +5101,8 @@ impl<'a> MessageRead<'a> for ProtoOAGetAccountListByAccessTokenRes<'a> {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
                 Ok(18) => msg.accessToken = r.read_string(bytes).map(Cow::Borrowed)?,
                 Ok(24) => msg.permissionScope = Some(r.read_enum(bytes)?),
-                Ok(34) => msg
-                    .ctidTraderAccount
-                    .push(r.read_message::<spotware::ProtoOACtidTraderAccount>(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(34) => msg.ctidTraderAccount.push(r.read_message::<spotware::ProtoOACtidTraderAccount>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -4063,33 +5112,17 @@ impl<'a> MessageRead<'a> for ProtoOAGetAccountListByAccessTokenRes<'a> {
 
 impl<'a> MessageWrite for ProtoOAGetAccountListByAccessTokenRes<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_len((&self.accessToken).len())
-            + self
-                .permissionScope
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .ctidTraderAccount
-                .iter()
-                .map(|s| 1 + sizeof_len((s).get_size()))
-                .sum::<usize>()
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((&self.accessToken).len())
+        + self.permissionScope.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.ctidTraderAccount.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
         w.write_with_tag(18, |w| w.write_string(&self.accessToken))?;
-        self.permissionScope.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(24, |w| w.write_enum(*&m as i32))
-        })?;
-        for s in &self.ctidTraderAccount {
-            w.write_with_tag(34, |w| w.write_message(s))?;
-        }
+        self.permissionScope.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_enum(*&m as i32)))?;
+        for s in &self.ctidTraderAccount { w.write_with_tag(34, |w| w.write_message(s))?; }
         Ok(())
     }
 }
@@ -4098,7 +5131,7 @@ impl<'a> MessageWrite for ProtoOAGetAccountListByAccessTokenRes<'a> {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOASubscribeSpotsReq {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub symbolId: Vec<i64>,
     pub subscribeToSpotTimestamp: Option<bool>,
 }
@@ -4109,12 +5142,10 @@ impl<'a> MessageRead<'a> for ProtoOASubscribeSpotsReq {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(24) => msg.symbolId.push(r.read_int64(bytes)?),
                 Ok(32) => msg.subscribeToSpotTimestamp = Some(r.read_bool(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -4124,33 +5155,17 @@ impl<'a> MessageRead<'a> for ProtoOASubscribeSpotsReq {
 
 impl MessageWrite for ProtoOASubscribeSpotsReq {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + self
-                .symbolId
-                .iter()
-                .map(|&s| 1 + sizeof_varint(*(&s) as u64))
-                .sum::<usize>()
-            + self
-                .subscribeToSpotTimestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbolId.iter().map(|&s| 1 + sizeof_varint(*(&s) as u64)).sum::<usize>()
+        + self.subscribeToSpotTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
-        for s in &self.symbolId {
-            w.write_with_tag(24, |w| w.write_int64(*&*s))?;
-        }
-        self.subscribeToSpotTimestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_bool(*&m)))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbolId { w.write_with_tag(24, |w| w.write_int64(*&*s))?; }
+        self.subscribeToSpotTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_bool(*&m)))?;
         Ok(())
     }
 }
@@ -4159,7 +5174,7 @@ impl MessageWrite for ProtoOASubscribeSpotsReq {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOASubscribeSpotsRes {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
 }
 
 impl<'a> MessageRead<'a> for ProtoOASubscribeSpotsRes {
@@ -4168,10 +5183,8 @@ impl<'a> MessageRead<'a> for ProtoOASubscribeSpotsRes {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -4181,18 +5194,87 @@ impl<'a> MessageRead<'a> for ProtoOASubscribeSpotsRes {
 
 impl MessageWrite for ProtoOASubscribeSpotsRes {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAUnsubscribeSpotsReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbolId: Vec<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAUnsubscribeSpotsReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.symbolId.push(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAUnsubscribeSpotsReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbolId.iter().map(|&s| 1 + sizeof_varint(*(&s) as u64)).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbolId { w.write_with_tag(24, |w| w.write_int64(*&*s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAUnsubscribeSpotsRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAUnsubscribeSpotsRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAUnsubscribeSpotsRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         Ok(())
     }
 }
@@ -4201,10 +5283,10 @@ impl MessageWrite for ProtoOASubscribeSpotsRes {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOASpotEvent {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
     pub symbolId: i64,
-    pub bid: Option<u32>,
-    pub ask: Option<u32>,
+    pub bid: Option<u64>,
+    pub ask: Option<u64>,
     pub trendbar: Vec<spotware::ProtoOATrendbar>,
     pub sessionClose: Option<u64>,
     pub timestamp: Option<i64>,
@@ -4216,18 +5298,14 @@ impl<'a> MessageRead<'a> for ProtoOASpotEvent {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
                 Ok(24) => msg.symbolId = r.read_int64(bytes)?,
-                Ok(32) => msg.bid = Some(r.read_uint32(bytes)?),
-                Ok(40) => msg.ask = Some(r.read_uint32(bytes)?),
-                Ok(50) => msg
-                    .trendbar
-                    .push(r.read_message::<spotware::ProtoOATrendbar>(bytes)?),
+                Ok(32) => msg.bid = Some(r.read_uint64(bytes)?),
+                Ok(40) => msg.ask = Some(r.read_uint64(bytes)?),
+                Ok(50) => msg.trendbar.push(r.read_message::<spotware::ProtoOATrendbar>(bytes)?),
                 Ok(56) => msg.sessionClose = Some(r.read_uint64(bytes)?),
                 Ok(64) => msg.timestamp = Some(r.read_int64(bytes)?),
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -4237,57 +5315,782 @@ impl<'a> MessageRead<'a> for ProtoOASpotEvent {
 
 impl MessageWrite for ProtoOASpotEvent {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
-            + 1
-            + sizeof_varint(*(&self.symbolId) as u64)
-            + self
-                .bid
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .ask
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .trendbar
-                .iter()
-                .map(|s| 1 + sizeof_len((s).get_size()))
-                .sum::<usize>()
-            + self
-                .sessionClose
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + self
-                .timestamp
-                .as_ref()
-                .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.symbolId) as u64)
+        + self.bid.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.ask.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.trendbar.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + self.sessionClose.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.timestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         w.write_with_tag(24, |w| w.write_int64(*&self.symbolId))?;
-        self.bid
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_uint32(*&m)))?;
-        self.ask
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_uint32(*&m)))?;
-        for s in &self.trendbar {
-            w.write_with_tag(50, |w| w.write_message(s))?;
+        self.bid.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_uint64(*&m)))?;
+        self.ask.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_uint64(*&m)))?;
+        for s in &self.trendbar { w.write_with_tag(50, |w| w.write_message(s))?; }
+        self.sessionClose.as_ref().map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_uint64(*&m)))?;
+        self.timestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASubscribeLiveTrendbarReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub period: spotware::ProtoOATrendbarPeriod,
+    pub symbolId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASubscribeLiveTrendbarReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.period = r.read_enum(bytes)?,
+                Ok(32) => msg.symbolId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
         }
-        self.sessionClose
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_uint64(*&m)))?;
-        self.timestamp
-            .as_ref()
-            .map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int64(*&m)))?;
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOASubscribeLiveTrendbarReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.period) as u64)
+        + 1 + sizeof_varint(*(&self.symbolId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_enum(*&self.period as i32))?;
+        w.write_with_tag(32, |w| w.write_int64(*&self.symbolId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASubscribeLiveTrendbarRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASubscribeLiveTrendbarRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOASubscribeLiveTrendbarRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAUnsubscribeLiveTrendbarReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub period: spotware::ProtoOATrendbarPeriod,
+    pub symbolId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAUnsubscribeLiveTrendbarReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.period = r.read_enum(bytes)?,
+                Ok(32) => msg.symbolId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAUnsubscribeLiveTrendbarReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.period) as u64)
+        + 1 + sizeof_varint(*(&self.symbolId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_enum(*&self.period as i32))?;
+        w.write_with_tag(32, |w| w.write_int64(*&self.symbolId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAUnsubscribeLiveTrendbarRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAUnsubscribeLiveTrendbarRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAUnsubscribeLiveTrendbarRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetTrendbarsReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub fromTimestamp: Option<i64>,
+    pub period: spotware::ProtoOATrendbarPeriod,
+    pub symbolId: i64,
+    pub count: Option<u32>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetTrendbarsReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.fromTimestamp = Some(r.read_int64(bytes)?),
+                Ok(40) => msg.period = r.read_enum(bytes)?,
+                Ok(48) => msg.symbolId = r.read_int64(bytes)?,
+                Ok(56) => msg.count = Some(r.read_uint32(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAGetTrendbarsReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.fromTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.period) as u64)
+        + 1 + sizeof_varint(*(&self.symbolId) as u64)
+        + self.count.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        self.fromTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(24, |w| w.write_int64(*&m)))?;
+        w.write_with_tag(40, |w| w.write_enum(*&self.period as i32))?;
+        w.write_with_tag(48, |w| w.write_int64(*&self.symbolId))?;
+        self.count.as_ref().map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_uint32(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetTrendbarsRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub period: spotware::ProtoOATrendbarPeriod,
+    pub trendbar: Vec<spotware::ProtoOATrendbar>,
+    pub symbolId: Option<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetTrendbarsRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.period = r.read_enum(bytes)?,
+                Ok(42) => msg.trendbar.push(r.read_message::<spotware::ProtoOATrendbar>(bytes)?),
+                Ok(48) => msg.symbolId = Some(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAGetTrendbarsRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.period) as u64)
+        + self.trendbar.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + self.symbolId.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_enum(*&self.period as i32))?;
+        for s in &self.trendbar { w.write_with_tag(42, |w| w.write_message(s))?; }
+        self.symbolId.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_int64(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetTickDataReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbolId: i64,
+    pub type_pb: spotware::ProtoOAQuoteType,
+    pub fromTimestamp: Option<i64>,
+    pub toTimestamp: Option<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetTickDataReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.symbolId = r.read_int64(bytes)?,
+                Ok(32) => msg.type_pb = r.read_enum(bytes)?,
+                Ok(40) => msg.fromTimestamp = Some(r.read_int64(bytes)?),
+                Ok(48) => msg.toTimestamp = Some(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAGetTickDataReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.symbolId) as u64)
+        + 1 + sizeof_varint(*(&self.type_pb) as u64)
+        + self.fromTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.toTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.symbolId))?;
+        w.write_with_tag(32, |w| w.write_enum(*&self.type_pb as i32))?;
+        self.fromTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
+        self.toTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(48, |w| w.write_int64(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetTickDataRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub tickData: Vec<spotware::ProtoOATickData>,
+    pub hasMore: bool,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetTickDataRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.tickData.push(r.read_message::<spotware::ProtoOATickData>(bytes)?),
+                Ok(32) => msg.hasMore = r.read_bool(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAGetTickDataRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.tickData.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + 1 + sizeof_varint(*(&self.hasMore) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.tickData { w.write_with_tag(26, |w| w.write_message(s))?; }
+        w.write_with_tag(32, |w| w.write_bool(*&self.hasMore))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetCtidProfileByTokenReq<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub accessToken: Cow<'a, str>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetCtidProfileByTokenReq<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(18) => msg.accessToken = r.read_string(bytes).map(Cow::Borrowed)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAGetCtidProfileByTokenReq<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((&self.accessToken).len())
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(18, |w| w.write_string(&self.accessToken))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetCtidProfileByTokenRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub profile: spotware::ProtoOACtidProfile,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetCtidProfileByTokenRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(18) => msg.profile = r.read_message::<spotware::ProtoOACtidProfile>(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAGetCtidProfileByTokenRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((self.profile).get_size())
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(18, |w| w.write_message(&self.profile))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADepthEvent {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbolId: u64,
+    pub newQuotes: Vec<spotware::ProtoOADepthQuote>,
+    pub deletedQuotes: Vec<u64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADepthEvent {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.symbolId = r.read_uint64(bytes)?,
+                Ok(34) => msg.newQuotes.push(r.read_message::<spotware::ProtoOADepthQuote>(bytes)?),
+                Ok(42) => msg.deletedQuotes = r.read_packed(bytes, |r, bytes| Ok(r.read_uint64(bytes)?))?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADepthEvent {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.symbolId) as u64)
+        + self.newQuotes.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + if self.deletedQuotes.is_empty() { 0 } else { 1 + sizeof_len(self.deletedQuotes.iter().map(|&s| sizeof_varint(*(&s) as u64)).sum::<usize>()) }
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_uint64(*&self.symbolId))?;
+        for s in &self.newQuotes { w.write_with_tag(34, |w| w.write_message(s))?; }
+        w.write_packed_with_tag(42, &self.deletedQuotes, |w, &m| w.write_uint64(*&m), &|&m| sizeof_varint(*(&m) as u64))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASubscribeDepthQuotesReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbolId: Vec<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASubscribeDepthQuotesReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.symbolId.push(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOASubscribeDepthQuotesReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbolId.iter().map(|&s| 1 + sizeof_varint(*(&s) as u64)).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbolId { w.write_with_tag(24, |w| w.write_int64(*&*s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASubscribeDepthQuotesRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASubscribeDepthQuotesRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOASubscribeDepthQuotesRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAUnsubscribeDepthQuotesReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbolId: Vec<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAUnsubscribeDepthQuotesReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.symbolId.push(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAUnsubscribeDepthQuotesReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbolId.iter().map(|&s| 1 + sizeof_varint(*(&s) as u64)).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbolId { w.write_with_tag(24, |w| w.write_int64(*&*s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAUnsubscribeDepthQuotesRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAUnsubscribeDepthQuotesRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAUnsubscribeDepthQuotesRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolCategoryListReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolCategoryListReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOASymbolCategoryListReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOASymbolCategoryListRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub symbolCategory: Vec<spotware::ProtoOASymbolCategory<'a>>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOASymbolCategoryListRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.symbolCategory.push(r.read_message::<spotware::ProtoOASymbolCategory>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOASymbolCategoryListRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.symbolCategory.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.symbolCategory { w.write_with_tag(26, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAAccountLogoutReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAAccountLogoutReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAAccountLogoutReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAAccountLogoutRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAAccountLogoutRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAAccountLogoutRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
         Ok(())
     }
 }
@@ -4296,7 +6099,7 @@ impl MessageWrite for ProtoOASpotEvent {
 #[derive(Default, Debug, PartialEq, Clone)]
 pub struct ProtoOAAccountDisconnectEvent {
     pub payloadType: Option<spotware::ProtoOAPayloadType>,
-    pub ctidTraderAccountId: u64,
+    pub ctidTraderAccountId: i64,
 }
 
 impl<'a> MessageRead<'a> for ProtoOAAccountDisconnectEvent {
@@ -4305,10 +6108,8 @@ impl<'a> MessageRead<'a> for ProtoOAAccountDisconnectEvent {
         while !r.is_eof() {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
-                Ok(16) => msg.ctidTraderAccountId = r.read_uint64(bytes)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -4318,18 +6119,309 @@ impl<'a> MessageRead<'a> for ProtoOAAccountDisconnectEvent {
 
 impl MessageWrite for ProtoOAAccountDisconnectEvent {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
-        w.write_with_tag(16, |w| w.write_uint64(*&self.ctidTraderAccountId))?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAMarginCallListReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAMarginCallListReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAMarginCallListReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAMarginCallListRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub marginCall: Vec<spotware::ProtoOAMarginCall>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAMarginCallListRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(18) => msg.marginCall.push(r.read_message::<spotware::ProtoOAMarginCall>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAMarginCallListRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.marginCall.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        for s in &self.marginCall { w.write_with_tag(18, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAMarginCallUpdateReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub marginCall: spotware::ProtoOAMarginCall,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAMarginCallUpdateReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.marginCall = r.read_message::<spotware::ProtoOAMarginCall>(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAMarginCallUpdateReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_len((self.marginCall).get_size())
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(26, |w| w.write_message(&self.marginCall))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAMarginCallUpdateRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAMarginCallUpdateRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAMarginCallUpdateRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAMarginCallUpdateEvent {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub marginCall: spotware::ProtoOAMarginCall,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAMarginCallUpdateEvent {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.marginCall = r.read_message::<spotware::ProtoOAMarginCall>(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAMarginCallUpdateEvent {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_len((self.marginCall).get_size())
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(26, |w| w.write_message(&self.marginCall))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAMarginCallTriggerEvent {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub marginCall: spotware::ProtoOAMarginCall,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAMarginCallTriggerEvent {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.marginCall = r.read_message::<spotware::ProtoOAMarginCall>(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAMarginCallTriggerEvent {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_len((self.marginCall).get_size())
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(26, |w| w.write_message(&self.marginCall))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetDynamicLeverageByIDReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub leverageId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetDynamicLeverageByIDReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.leverageId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAGetDynamicLeverageByIDReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.leverageId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.leverageId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetDynamicLeverageByIDRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub leverage: spotware::ProtoOADynamicLeverage,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetDynamicLeverageByIDRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.leverage = r.read_message::<spotware::ProtoOADynamicLeverage>(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAGetDynamicLeverageByIDRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_len((self.leverage).get_size())
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(26, |w| w.write_message(&self.leverage))?;
         Ok(())
     }
 }
@@ -4348,9 +6440,7 @@ impl<'a> MessageRead<'a> for ProtoOARefreshTokenReq<'a> {
             match r.next_tag(bytes) {
                 Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
                 Ok(18) => msg.refreshToken = r.read_string(bytes).map(Cow::Borrowed)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -4360,17 +6450,12 @@ impl<'a> MessageRead<'a> for ProtoOARefreshTokenReq<'a> {
 
 impl<'a> MessageWrite for ProtoOARefreshTokenReq<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_len((&self.refreshToken).len())
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((&self.refreshToken).len())
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
         w.write_with_tag(18, |w| w.write_string(&self.refreshToken))?;
         Ok(())
     }
@@ -4396,9 +6481,7 @@ impl<'a> MessageRead<'a> for ProtoOARefreshTokenRes<'a> {
                 Ok(26) => msg.tokenType = r.read_string(bytes).map(Cow::Borrowed)?,
                 Ok(32) => msg.expiresIn = r.read_int64(bytes)?,
                 Ok(42) => msg.refreshToken = r.read_string(bytes).map(Cow::Borrowed)?,
-                Ok(t) => {
-                    r.read_unknown(bytes, t)?;
-                }
+                Ok(t) => { r.read_unknown(bytes, t)?; }
                 Err(e) => return Err(e),
             }
         }
@@ -4408,23 +6491,15 @@ impl<'a> MessageRead<'a> for ProtoOARefreshTokenRes<'a> {
 
 impl<'a> MessageWrite for ProtoOARefreshTokenRes<'a> {
     fn get_size(&self) -> usize {
-        self.payloadType
-            .as_ref()
-            .map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
-            + 1
-            + sizeof_len((&self.accessToken).len())
-            + 1
-            + sizeof_len((&self.tokenType).len())
-            + 1
-            + sizeof_varint(*(&self.expiresIn) as u64)
-            + 1
-            + sizeof_len((&self.refreshToken).len())
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_len((&self.accessToken).len())
+        + 1 + sizeof_len((&self.tokenType).len())
+        + 1 + sizeof_varint(*(&self.expiresIn) as u64)
+        + 1 + sizeof_len((&self.refreshToken).len())
     }
 
     fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
-        self.payloadType.as_ref().map_or(Ok(()), |&m| {
-            w.write_with_tag(8, |w| w.write_enum(*&m as i32))
-        })?;
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
         w.write_with_tag(18, |w| w.write_string(&self.accessToken))?;
         w.write_with_tag(26, |w| w.write_string(&self.tokenType))?;
         w.write_with_tag(32, |w| w.write_int64(*&self.expiresIn))?;
@@ -4432,3 +6507,594 @@ impl<'a> MessageWrite for ProtoOARefreshTokenRes<'a> {
         Ok(())
     }
 }
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAHoliday<'a> {
+    pub holidayId: i64,
+    pub name: Cow<'a, str>,
+    pub description: Option<Cow<'a, str>>,
+    pub scheduleTimeZone: Cow<'a, str>,
+    pub holidayDate: i64,
+    pub isRecurring: bool,
+    pub startSecond: Option<i32>,
+    pub endSecond: Option<i32>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAHoliday<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.holidayId = r.read_int64(bytes)?,
+                Ok(18) => msg.name = r.read_string(bytes).map(Cow::Borrowed)?,
+                Ok(26) => msg.description = Some(r.read_string(bytes).map(Cow::Borrowed)?),
+                Ok(34) => msg.scheduleTimeZone = r.read_string(bytes).map(Cow::Borrowed)?,
+                Ok(40) => msg.holidayDate = r.read_int64(bytes)?,
+                Ok(48) => msg.isRecurring = r.read_bool(bytes)?,
+                Ok(56) => msg.startSecond = Some(r.read_int32(bytes)?),
+                Ok(64) => msg.endSecond = Some(r.read_int32(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAHoliday<'a> {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.holidayId) as u64)
+        + 1 + sizeof_len((&self.name).len())
+        + self.description.as_ref().map_or(0, |m| 1 + sizeof_len((&m).len()))
+        + 1 + sizeof_len((&self.scheduleTimeZone).len())
+        + 1 + sizeof_varint(*(&self.holidayDate) as u64)
+        + 1 + sizeof_varint(*(&self.isRecurring) as u64)
+        + self.startSecond.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.endSecond.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.holidayId))?;
+        w.write_with_tag(18, |w| w.write_string(&self.name))?;
+        self.description.as_ref().map_or(Ok(()), |m| w.write_with_tag(26, |w| w.write_string(&m)))?;
+        w.write_with_tag(34, |w| w.write_string(&self.scheduleTimeZone))?;
+        w.write_with_tag(40, |w| w.write_int64(*&self.holidayDate))?;
+        w.write_with_tag(48, |w| w.write_bool(*&self.isRecurring))?;
+        self.startSecond.as_ref().map_or(Ok(()), |&m| w.write_with_tag(56, |w| w.write_int32(*&m)))?;
+        self.endSecond.as_ref().map_or(Ok(()), |&m| w.write_with_tag(64, |w| w.write_int32(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADynamicLeverage {
+    pub leverageId: i64,
+    pub tiers: Vec<spotware::ProtoOADynamicLeverageTier>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADynamicLeverage {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.leverageId = r.read_int64(bytes)?,
+                Ok(18) => msg.tiers.push(r.read_message::<spotware::ProtoOADynamicLeverageTier>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADynamicLeverage {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.leverageId) as u64)
+        + self.tiers.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.leverageId))?;
+        for s in &self.tiers { w.write_with_tag(18, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADynamicLeverageTier {
+    pub volume: i64,
+    pub leverage: i32,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADynamicLeverageTier {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.volume = r.read_int64(bytes)?,
+                Ok(16) => msg.leverage = r.read_int32(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADynamicLeverageTier {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.volume) as u64)
+        + 1 + sizeof_varint(*(&self.leverage) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.volume))?;
+        w.write_with_tag(16, |w| w.write_int32(*&self.leverage))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAPositionUnrealizedPnL {
+    pub positionId: i64,
+    pub grossUnrealizedPnL: i64,
+    pub netUnrealizedPnL: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAPositionUnrealizedPnL {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.positionId = r.read_int64(bytes)?,
+                Ok(16) => msg.grossUnrealizedPnL = r.read_int64(bytes)?,
+                Ok(24) => msg.netUnrealizedPnL = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAPositionUnrealizedPnL {
+    fn get_size(&self) -> usize {
+        1 + sizeof_varint(*(&self.positionId) as u64)
+        + 1 + sizeof_varint(*(&self.grossUnrealizedPnL) as u64)
+        + 1 + sizeof_varint(*(&self.netUnrealizedPnL) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        w.write_with_tag(8, |w| w.write_int64(*&self.positionId))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.grossUnrealizedPnL))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.netUnrealizedPnL))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADealListByPositionIdReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub positionId: i64,
+    pub fromTimestamp: Option<i64>,
+    pub toTimestamp: Option<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADealListByPositionIdReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.positionId = r.read_int64(bytes)?,
+                Ok(32) => msg.fromTimestamp = Some(r.read_int64(bytes)?),
+                Ok(40) => msg.toTimestamp = Some(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADealListByPositionIdReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.positionId) as u64)
+        + self.fromTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.toTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.positionId))?;
+        self.fromTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
+        self.toTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADealListByPositionIdRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub deal: Vec<spotware::ProtoOADeal>,
+    pub hasMore: bool,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADealListByPositionIdRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.deal.push(r.read_message::<spotware::ProtoOADeal>(bytes)?),
+                Ok(32) => msg.hasMore = r.read_bool(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADealListByPositionIdRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.deal.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + 1 + sizeof_varint(*(&self.hasMore) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.deal { w.write_with_tag(26, |w| w.write_message(s))?; }
+        w.write_with_tag(32, |w| w.write_bool(*&self.hasMore))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAOrderDetailsReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub orderId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAOrderDetailsReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.orderId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAOrderDetailsReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.orderId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.orderId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAOrderDetailsRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub order: spotware::ProtoOAOrder<'a>,
+    pub deal: Vec<spotware::ProtoOADeal>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAOrderDetailsRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.order = r.read_message::<spotware::ProtoOAOrder>(bytes)?,
+                Ok(34) => msg.deal.push(r.read_message::<spotware::ProtoOADeal>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAOrderDetailsRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_len((self.order).get_size())
+        + self.deal.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(26, |w| w.write_message(&self.order))?;
+        for s in &self.deal { w.write_with_tag(34, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAOrderListByPositionIdReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub positionId: i64,
+    pub fromTimestamp: Option<i64>,
+    pub toTimestamp: Option<i64>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAOrderListByPositionIdReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.positionId = r.read_int64(bytes)?,
+                Ok(32) => msg.fromTimestamp = Some(r.read_int64(bytes)?),
+                Ok(40) => msg.toTimestamp = Some(r.read_int64(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAOrderListByPositionIdReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.positionId) as u64)
+        + self.fromTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + self.toTimestamp.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.positionId))?;
+        self.fromTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(32, |w| w.write_int64(*&m)))?;
+        self.toTimestamp.as_ref().map_or(Ok(()), |&m| w.write_with_tag(40, |w| w.write_int64(*&m)))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAOrderListByPositionIdRes<'a> {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub order: Vec<spotware::ProtoOAOrder<'a>>,
+    pub hasMore: bool,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAOrderListByPositionIdRes<'a> {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.order.push(r.read_message::<spotware::ProtoOAOrder>(bytes)?),
+                Ok(32) => msg.hasMore = r.read_bool(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl<'a> MessageWrite for ProtoOAOrderListByPositionIdRes<'a> {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.order.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + 1 + sizeof_varint(*(&self.hasMore) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.order { w.write_with_tag(26, |w| w.write_message(s))?; }
+        w.write_with_tag(32, |w| w.write_bool(*&self.hasMore))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADealOffsetListReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub dealId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADealOffsetListReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(24) => msg.dealId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADealOffsetListReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + 1 + sizeof_varint(*(&self.dealId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        w.write_with_tag(24, |w| w.write_int64(*&self.dealId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOADealOffsetListRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub offsetBy: Vec<spotware::ProtoOADealOffset>,
+    pub offsetting: Vec<spotware::ProtoOADealOffset>,
+}
+
+impl<'a> MessageRead<'a> for ProtoOADealOffsetListRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.offsetBy.push(r.read_message::<spotware::ProtoOADealOffset>(bytes)?),
+                Ok(34) => msg.offsetting.push(r.read_message::<spotware::ProtoOADealOffset>(bytes)?),
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOADealOffsetListRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.offsetBy.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + self.offsetting.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.offsetBy { w.write_with_tag(26, |w| w.write_message(s))?; }
+        for s in &self.offsetting { w.write_with_tag(34, |w| w.write_message(s))?; }
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetPositionUnrealizedPnLReq {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetPositionUnrealizedPnLReq {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAGetPositionUnrealizedPnLReq {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        Ok(())
+    }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Default, Debug, PartialEq, Clone)]
+pub struct ProtoOAGetPositionUnrealizedPnLRes {
+    pub payloadType: Option<spotware::ProtoOAPayloadType>,
+    pub ctidTraderAccountId: i64,
+    pub positionUnrealizedPnL: Vec<spotware::ProtoOAPositionUnrealizedPnL>,
+    pub moneyDigits: u32,
+}
+
+impl<'a> MessageRead<'a> for ProtoOAGetPositionUnrealizedPnLRes {
+    fn from_reader(r: &mut BytesReader, bytes: &'a [u8]) -> Result<Self> {
+        let mut msg = Self::default();
+        while !r.is_eof() {
+            match r.next_tag(bytes) {
+                Ok(8) => msg.payloadType = Some(r.read_enum(bytes)?),
+                Ok(16) => msg.ctidTraderAccountId = r.read_int64(bytes)?,
+                Ok(26) => msg.positionUnrealizedPnL.push(r.read_message::<spotware::ProtoOAPositionUnrealizedPnL>(bytes)?),
+                Ok(32) => msg.moneyDigits = r.read_uint32(bytes)?,
+                Ok(t) => { r.read_unknown(bytes, t)?; }
+                Err(e) => return Err(e),
+            }
+        }
+        Ok(msg)
+    }
+}
+
+impl MessageWrite for ProtoOAGetPositionUnrealizedPnLRes {
+    fn get_size(&self) -> usize {
+        self.payloadType.as_ref().map_or(0, |&m| 1 + sizeof_varint(*(&m) as u64))
+        + 1 + sizeof_varint(*(&self.ctidTraderAccountId) as u64)
+        + self.positionUnrealizedPnL.iter().map(|s| 1 + sizeof_len((s).get_size())).sum::<usize>()
+        + 1 + sizeof_varint(*(&self.moneyDigits) as u64)
+    }
+
+    fn write_message<W: WriterBackend>(&self, w: &mut Writer<W>) -> Result<()> {
+        self.payloadType.as_ref().map_or(Ok(()), |&m| w.write_with_tag(8, |w| w.write_enum(*&m as i32)))?;
+        w.write_with_tag(16, |w| w.write_int64(*&self.ctidTraderAccountId))?;
+        for s in &self.positionUnrealizedPnL { w.write_with_tag(26, |w| w.write_message(s))?; }
+        w.write_with_tag(32, |w| w.write_uint32(*&self.moneyDigits))?;
+        Ok(())
+    }
+}
+
